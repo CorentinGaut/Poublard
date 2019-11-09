@@ -28,8 +28,12 @@ public class PlayerLobbyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Character 1 Submit"))
+        if (Input.GetButtonDown("Character 1 Submit") || Input.GetButtonDown("Character 2 Submit") || Input.GetButtonDown("Character 3 Submit") || Input.GetButtonDown("Character 4 Submit"))
         {
+            if (nbPlayer == 1)
+            {
+
+            }
             if (player1play == false)
             {
                 player1Selection.transform.Find("pressAToJoin").gameObject.SetActive(false);
