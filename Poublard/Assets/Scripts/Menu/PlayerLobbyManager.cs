@@ -110,7 +110,7 @@ public class PlayerLobbyManager : MonoBehaviour
             {
                 Debug.Log(nbPlayer);
                 GameManager.nbPlayer = nbPlayer;
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(3);
             }
         }
         else if (nbPlayer == 2)
@@ -119,7 +119,7 @@ public class PlayerLobbyManager : MonoBehaviour
             {
                 Debug.Log(nbPlayer);
                 GameManager.nbPlayer = nbPlayer;
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(3);
             }
         }
         else if (nbPlayer == 3)
@@ -128,7 +128,7 @@ public class PlayerLobbyManager : MonoBehaviour
             {
                 Debug.Log(nbPlayer);
                 GameManager.nbPlayer = nbPlayer;
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(3);
             }
         }
         else if (nbPlayer == 4)
@@ -137,7 +137,7 @@ public class PlayerLobbyManager : MonoBehaviour
             {
                 Debug.Log(nbPlayer);
                 GameManager.nbPlayer = nbPlayer;
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(3);
             }
         }
     }

@@ -72,6 +72,8 @@ public class LevelManager : MonoBehaviour
 
     public void TrashPickUp(int nbPlayer)
     {
+        if (nbPlayer >= nbPlayers)
+            return;
         scoresPlayers[nbPlayer-1]++;
                 nbTrashRequired = (int)((float)totalNbTrash *completionPercentageRequired/100.0f);
 
