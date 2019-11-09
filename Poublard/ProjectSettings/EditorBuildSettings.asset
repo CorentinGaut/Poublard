@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: b38047a556f41ec43be6976b3a1533c0
   - enabled: 1
+    path: Assets/Scenes/PlayerLobby.unity
+    guid: 4001de241970c66439372c773099c571
+  - enabled: 1
     path: Assets/Scenes/testleo.unity
     guid: d8f76040a97e2074cb592dd4a5502e86
   m_configObjects: {}
