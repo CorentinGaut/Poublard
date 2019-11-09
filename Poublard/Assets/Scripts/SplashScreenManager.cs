@@ -9,14 +9,16 @@ public class SplashScreenManager : MonoBehaviour
     public Image voile;
 
     private float timeCount = 0;
+    private float fadeOut = 0;
 
     // Update is called once per frame
     void Update()
     {
-        timeCount += 0.2f * Time.deltaTime;
-        if (timeCount <= 2f)
+        fadeOut += 0.15f * Time.deltaTime;
+        timeCount += Time.deltaTime;
+        if (timeCount <= 7f)
         {
-            voile.color = new Color(voile.color.r, voile.color.g, voile.color.b, timeCount);
+            voile.color = new Color(voile.color.r, voile.color.g, voile.color.b, fadeOut);
         }
         else
         {
