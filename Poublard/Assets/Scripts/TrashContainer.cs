@@ -26,7 +26,7 @@ public class TrashContainer : MonoBehaviour
         if (other.tag == "Trash")
         {
             score++;
-            levelManager.TrashedPickUp(nbPlayer);
+            levelManager.TrashPickUp(nbPlayer);
             Destroy(other.gameObject);
             txtScore.text = score.ToString();
         }

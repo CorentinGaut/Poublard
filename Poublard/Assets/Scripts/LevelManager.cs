@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
         txtTimer.text = ((int)time).ToString();
     }
 
-    public void TrashedPickUp(int nbPlayer)
+    public void TrashPickUp(int nbPlayer)
     {
         scoresPlayers[nbPlayer-1]++;
                 nbTrashRequired = (int)((float)totalNbTrash *completionPercentageRequired/100.0f);
