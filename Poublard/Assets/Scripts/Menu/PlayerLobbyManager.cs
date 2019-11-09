@@ -28,12 +28,8 @@ public class PlayerLobbyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Character 1 Submit") || Input.GetButtonDown("Character 2 Submit") || Input.GetButtonDown("Character 3 Submit") || Input.GetButtonDown("Character 4 Submit"))
+        if (Input.GetButtonDown("Character 1 Submit"))
         {
-            if (nbPlayer == 1)
-            {
-
-            }
             if (player1play == false)
             {
                 player1Selection.transform.Find("pressAToJoin").gameObject.SetActive(false);
@@ -112,6 +108,7 @@ public class PlayerLobbyManager : MonoBehaviour
         {
             if (Input.GetButtonDown("Character 1 Start"))
             {
+                Debug.Log(nbPlayer);
                 GameManager.nbPlayer = nbPlayer;
                 SceneManager.LoadScene(2);
             }
@@ -120,6 +117,7 @@ public class PlayerLobbyManager : MonoBehaviour
         {
             if (Input.GetButtonDown("Character 1 Start") || Input.GetButtonDown("Character 2 Start"))
             {
+                Debug.Log(nbPlayer);
                 GameManager.nbPlayer = nbPlayer;
                 SceneManager.LoadScene(2);
             }
@@ -128,6 +126,7 @@ public class PlayerLobbyManager : MonoBehaviour
         {
             if (Input.GetButtonDown("Character 1 Start") || Input.GetButtonDown("Character 2 Start") || Input.GetButtonDown("Character 3 Start"))
             {
+                Debug.Log(nbPlayer);
                 GameManager.nbPlayer = nbPlayer;
                 SceneManager.LoadScene(2);
             }
@@ -136,6 +135,7 @@ public class PlayerLobbyManager : MonoBehaviour
         {
             if (Input.GetButtonDown("Character 1 Start") || Input.GetButtonDown("Character 2 Start") || Input.GetButtonDown("Character 3 Start") || Input.GetButtonDown("Character 4 Start"))
             {
+                Debug.Log(nbPlayer);
                 GameManager.nbPlayer = nbPlayer;
                 SceneManager.LoadScene(2);
             }
