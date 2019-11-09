@@ -6,6 +6,7 @@ using System;
 [RequireComponent(typeof(Camera))]
 public class CameraZoom : MonoBehaviour
 {
+    public static CameraZoom instance;
     public List<Transform> targets;
 
     public Vector3 offset;
@@ -16,7 +17,10 @@ public class CameraZoom : MonoBehaviour
 
     Vector3 velocity;
     Camera cam;
-
+    public void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         cam = GetComponent<Camera>();

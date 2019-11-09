@@ -29,6 +29,7 @@ public class CharController : MonoBehaviour
     {
         isDead = true;
         gameObject.SetActive(!isDead);
+        CameraZoom.instance.targets.Remove(this.transform);
     }
 
     private void OnCollisionEnter(Collision collision)

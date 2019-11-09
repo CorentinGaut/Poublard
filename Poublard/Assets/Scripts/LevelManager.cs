@@ -55,6 +55,7 @@ public class LevelManager : MonoBehaviour
     {
         Characters[i].transform.position = SpawnPoints[i].position;
         Characters[i].Play();
+        CameraZoom.instance.targets.Add(Characters[i].transform);
     }
 
     // Update is called once per frame
