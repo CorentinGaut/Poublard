@@ -10,6 +10,6 @@ public class MenuButtonManager : MonoBehaviour
 
     public void Jouer()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("PlayerLobby");
     }
 }
