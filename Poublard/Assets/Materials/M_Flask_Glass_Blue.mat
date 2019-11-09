@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Flask_Glass
+  m_Name: M_Flask_Glass_Blue
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION
   m_LightmapFlags: 1
@@ -74,5 +74,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 0.015686275}
-    - _EmissionColor: {r: 0.2924528, g: 0.07035421, b: 0.18551643, a: 1}
+    - _Color: {r: 0, g: 0.88181186, b: 1, a: 0.015686275}
+    - _EmissionColor: {r: 0.3224012, g: 0.54855347, b: 0.6509434, a: 1}
