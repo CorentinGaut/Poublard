@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager instance;
 
     public int totalNbTrash;
     public int nbTrashPicked;
@@ -14,6 +16,8 @@ public class LevelManager : MonoBehaviour
     public int nbPlayers;
 
     public int[] scoresPlayers;
+    public Transform[] SpawnPoints;
+    public CharController[] Characters;
 
     public float time;
 
@@ -23,11 +27,34 @@ public class LevelManager : MonoBehaviour
 
     public Canvas endGameCanvas;
     // Start is called before the first frame update
+
+
+    public void Awake()
+    {
+        instance = this;
+    }
+    // Start is called before the first frame update
     void Start()
     {
+        nbPlayers = GameManager.nbPlayer;
         scoresPlayers = new int[nbPlayers];
         txtTimer.text = ((int)time).ToString();
         nbTrashPicked = 0;
+        SpawnPlayers();
+    }
+
+    public void SpawnPlayers()
+    {
+        for (int i = 0; i < nbPlayers; i++)
+        {
+            SpawnPlayer(i);
+        }
+    }
+
+    public void SpawnPlayer(int i)
+    {
+        Characters[i].transform.position = SpawnPoints[i].position;
+        Characters[i].Play();
     }
 
     // Update is called once per frame

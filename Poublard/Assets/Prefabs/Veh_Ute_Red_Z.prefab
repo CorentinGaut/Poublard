@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 6233781357397503145}
   m_Layer: 0
   m_Name: Veh_Ute_Red_Z
-  m_TagString: Untagged
+  m_TagString: Ennemi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
