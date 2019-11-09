@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLobbyManager : MonoBehaviour
 {
-    public Canvas player1SelectionCanvas;
-    public Canvas player2SelectionCanvas;
-    public Canvas player3SelectionCanvas;
-    public Canvas player4SelectionCanvas;
+    public GameObject player1Selection;
+    public GameObject player2Selection;
+    public GameObject player3Selection;
+    public GameObject player4Selection;
 
     public GameManager gameManager;
 
@@ -32,15 +32,15 @@ public class PlayerLobbyManager : MonoBehaviour
         {
             if (player1play == false)
             {
-                player1SelectionCanvas.transform.Find("texts").gameObject.SetActive(false);
-                player1SelectionCanvas.transform.Find("playerImage").gameObject.SetActive(true);
+                player1Selection.transform.Find("pressAToJoin").gameObject.SetActive(false);
+                player1Selection.transform.Find("playerDummy").gameObject.SetActive(true);
                 player1play = true;
                 nbPlayer++;
             }
             else
             {
-                player1SelectionCanvas.transform.Find("texts").gameObject.SetActive(true);
-                player1SelectionCanvas.transform.Find("playerImage").gameObject.SetActive(false);
+                player1Selection.transform.Find("pressAToJoin").gameObject.SetActive(true);
+                player1Selection.transform.Find("playerDummy").gameObject.SetActive(false);
                 player1play = false;
                 nbPlayer--;
             }
@@ -48,18 +48,17 @@ public class PlayerLobbyManager : MonoBehaviour
 
         if (Input.GetButtonDown("Character 2 Submit"))
         {
-            Debug.Log("blblbl");
             if (player2play == false)
             {
-                player2SelectionCanvas.transform.Find("texts").gameObject.SetActive(false);
-                player2SelectionCanvas.transform.Find("playerImage").gameObject.SetActive(true);
+                player2Selection.transform.Find("pressAToJoin").gameObject.SetActive(false);
+                player2Selection.transform.Find("playerDummy").gameObject.SetActive(true);
                 player2play = true;
                 nbPlayer++;
             }
             else
             {
-                player2SelectionCanvas.transform.Find("texts").gameObject.SetActive(true);
-                player2SelectionCanvas.transform.Find("playerImage").gameObject.SetActive(false);
+                player2Selection.transform.Find("pressAToJoin").gameObject.SetActive(true);
+                player2Selection.transform.Find("playerDummy").gameObject.SetActive(false);
                 player2play = false;
                 nbPlayer--;
             }
@@ -69,15 +68,15 @@ public class PlayerLobbyManager : MonoBehaviour
         {
             if (player3play == false)
             {
-                player3SelectionCanvas.transform.Find("texts").gameObject.SetActive(false);
-                player3SelectionCanvas.transform.Find("playerImage").gameObject.SetActive(true);
+                player3Selection.transform.Find("pressAToJoin").gameObject.SetActive(false);
+                player3Selection.transform.Find("playerDummy").gameObject.SetActive(true);
                 player3play = true;
                 nbPlayer++;
             }
             else
             {
-                player3SelectionCanvas.transform.Find("texts").gameObject.SetActive(true);
-                player3SelectionCanvas.transform.Find("playerImage").gameObject.SetActive(false);
+                player3Selection.transform.Find("pressAToJoin").gameObject.SetActive(true);
+                player3Selection.transform.Find("playerDummy").gameObject.SetActive(false);
                 player3play = false;
                 nbPlayer--;
             }
@@ -87,15 +86,15 @@ public class PlayerLobbyManager : MonoBehaviour
         {
             if (player4play == false)
             {
-                player4SelectionCanvas.transform.Find("texts").gameObject.SetActive(false);
-                player4SelectionCanvas.transform.Find("playerImage").gameObject.SetActive(true);
+                player4Selection.transform.Find("pressAToJoin").gameObject.SetActive(false);
+                player4Selection.transform.Find("playerDummy").gameObject.SetActive(true);
                 player4play = true;
                 nbPlayer++;
             }
             else
             {
-                player4SelectionCanvas.transform.Find("texts").gameObject.SetActive(true);
-                player4SelectionCanvas.transform.Find("playerImage").gameObject.SetActive(false);
+                player4Selection.transform.Find("pressAToJoin").gameObject.SetActive(true);
+                player4Selection.transform.Find("playerDummy").gameObject.SetActive(false);
                 player4play = false;
                 nbPlayer--;
             }

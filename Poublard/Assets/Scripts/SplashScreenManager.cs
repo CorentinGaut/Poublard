@@ -1,30 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SplashScreenManager : MonoBehaviour
 {
-    public TextMeshProUGUI title;
-    public TextMeshProUGUI presented;
-    public TextMeshProUGUI names;
-
-    public float TimeTitleSpawn;
-    public float TimePresentedSpawn;
-    public float TimeNamesSpawn;
+    public Image voile;
 
     private float timeCount = 0;
 
     // Update is called once per frame
     void Update()
     {
-        timeCount += Time.deltaTime;
-        if (timeCount < TimeTitleSpawn)
+        timeCount += 0.2f * Time.deltaTime;
+        if (timeCount <= 2f)
         {
-            title.GetComponent<RectTransform>().localScale = new Vector3(0.3f * timeCount, 0.3f * timeCount, 0);
+            voile.color = new Color(voile.color.r, voile.color.g, voile.color.b, timeCount);
         }
         else
         {
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }

@@ -3,6 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtonManager : MonoBehaviour
 {
+
+    private void Update()
+    {
+        Debug.Log(Input.GetAxisRaw("Vertical"));
+    }
     public void Quitter()
     {
         Application.Quit();
@@ -10,6 +15,6 @@ public class MenuButtonManager : MonoBehaviour
 
     public void Jouer()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("PlayerLobby");
     }
 }
