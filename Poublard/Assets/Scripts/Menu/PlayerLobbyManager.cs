@@ -108,6 +108,7 @@ public class PlayerLobbyManager : MonoBehaviour
         {
             if (Input.GetButtonDown("Character 1 Start"))
             {
+                GameManager.nbPlayer = nbPlayer;
                 SceneManager.LoadScene(2);
             }
         }
@@ -115,6 +116,7 @@ public class PlayerLobbyManager : MonoBehaviour
         {
             if (Input.GetButtonDown("Character 1 Start") || Input.GetButtonDown("Character 2 Start"))
             {
+                GameManager.nbPlayer = nbPlayer;
                 SceneManager.LoadScene(2);
             }
         }
@@ -122,6 +124,7 @@ public class PlayerLobbyManager : MonoBehaviour
         {
             if (Input.GetButtonDown("Character 1 Start") || Input.GetButtonDown("Character 2 Start") || Input.GetButtonDown("Character 3 Start"))
             {
+                GameManager.nbPlayer = nbPlayer;
                 SceneManager.LoadScene(2);
             }
         }
@@ -129,6 +132,7 @@ public class PlayerLobbyManager : MonoBehaviour
         {
             if (Input.GetButtonDown("Character 1 Start") || Input.GetButtonDown("Character 2 Start") || Input.GetButtonDown("Character 3 Start") || Input.GetButtonDown("Character 4 Start"))
             {
+                GameManager.nbPlayer = nbPlayer;
                 SceneManager.LoadScene(2);
             }
         }
