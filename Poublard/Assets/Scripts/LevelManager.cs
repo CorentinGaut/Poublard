@@ -9,6 +9,8 @@ public class LevelManager : MonoBehaviour
     public int totalNbTrash;
     public int nbTrashPicked;
 
+    public int nbTrashRequired;
+    public float completionPercentageRequired;
     public int nbPlayers;
 
     public int[] scoresPlayers;
@@ -24,7 +26,7 @@ public class LevelManager : MonoBehaviour
         scoresPlayers = new int[nbPlayers];
         txtTimer.text = ((int)time).ToString();
         nbTrashPicked = 0;
-}
+    }
 
     // Update is called once per frame
     void Update()
@@ -36,9 +38,10 @@ public class LevelManager : MonoBehaviour
     public void TrashedPickUp(int nbPlayer)
     {
         scoresPlayers[nbPlayer-1]++;
-        
+                nbTrashRequired = (int)((float)totalNbTrash *completionPercentageRequired/100.0f);
+
         nbTrashPicked++;
-        float fillAmount = (float)nbTrashPicked / (float)totalNbTrash;
+        float fillAmount = (float)nbTrashPicked / (float)nbTrashRequired;
         txtGlobalScore.text = ((int)(fillAmount * 100.0f)).ToString()+"%";
         imageGlobalScore.fillAmount = fillAmount;
         imageGlobalScore.color = new Vector4(1 -  fillAmount, 1 * fillAmount, 0,1);
