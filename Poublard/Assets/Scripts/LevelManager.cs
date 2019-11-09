@@ -20,6 +20,8 @@ public class LevelManager : MonoBehaviour
     public Text txtGlobalScore;
     public Text txtTimer;
     public Image imageGlobalScore;
+
+    public Canvas endGameCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,12 @@ public class LevelManager : MonoBehaviour
     {
         time -= Time.deltaTime;
         txtTimer.text = ((int)time).ToString();
+
+        if (time <= 0) //fin de partie
+        {
+            Time.timeScale = 0f;
+            endGameCanvas.gameObject.SetActive(true);
+        }
     }
 
     public void TrashPickUp(int nbPlayer)
