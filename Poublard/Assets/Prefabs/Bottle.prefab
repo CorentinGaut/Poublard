@@ -42,6 +42,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 1895eade1a443764d86897a9ade059dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trash
+      objectReference: {fileID: 0}
     - target: {fileID: -6054058774237248251, guid: 1895eade1a443764d86897a9ade059dd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

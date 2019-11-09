@@ -6,6 +6,7 @@ using UnityEngine;
 public class TrashSpawner : MonoBehaviour
 {
     public List<GameObject> objects;
+    public LevelManager lvlManager;
 
     public int nbTrashSpawned;
 
@@ -19,6 +20,7 @@ public class TrashSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lvlManager.totalNbTrash += nbTrashSpawned;
         SpawnTrash();
     }
 

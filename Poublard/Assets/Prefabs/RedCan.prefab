@@ -42,6 +42,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedCan
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8f3035f8f94178b4085977454e696d6c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trash
+      objectReference: {fileID: 0}
     - target: {fileID: -6054058774237248251, guid: 8f3035f8f94178b4085977454e696d6c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
