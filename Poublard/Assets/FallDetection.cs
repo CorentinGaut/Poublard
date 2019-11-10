@@ -7,6 +7,7 @@ public class FallDetection : MonoBehaviour
     public GameObject groundGO;
     DisableActiveRagdoll disableActiveRagdoll;
     float defaultYForce;
+    public float stairYForce = 75f;
 
     private void Start()
     {
@@ -32,9 +33,9 @@ public class FallDetection : MonoBehaviour
         if(groundGO == null && !disableActiveRagdoll.disableActiveRagdoll)
         {
             disableActiveRagdoll.disableActiveRagdoll = true;
-        } else if (groundGO.name.Contains("Stair"))
+        } else if (groundGO != null && groundGO.name.Contains("Stair"))
         {
-            transform.parent.GetComponent<AddPermanentForces>().yForce = 78f;
+            transform.parent.GetComponent<AddPermanentForces>().yForce = stairYForce;
         } else
         {
             transform.parent.GetComponent<AddPermanentForces>().yForce = defaultYForce;
