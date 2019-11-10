@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
@@ -83,5 +84,15 @@ public class LevelManager : MonoBehaviour
         txtGlobalScore.text = ((int)(fillAmount * 100.0f)).ToString()+"%";
         imageGlobalScore.fillAmount = fillAmount;
         imageGlobalScore.color = new Vector4(1 -  fillAmount, 1 * fillAmount, 0,1);
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
+    }
+
+    public void LoadScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 }
