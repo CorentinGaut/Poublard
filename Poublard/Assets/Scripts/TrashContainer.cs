@@ -15,11 +15,7 @@ public class TrashContainer : MonoBehaviour
         txtScore.text = score.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     private void OnTriggerEnter(Collider other)
     {
