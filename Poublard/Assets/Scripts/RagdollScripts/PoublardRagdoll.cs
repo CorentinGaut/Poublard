@@ -13,6 +13,7 @@ public class PoublardRagdoll : MonoBehaviour
     public float punchForce = 150f, jumpForce = 1500f;
     public bool dead = false, respawn = false;
     Vector3[] defaultPosChildren;
+    Quaternion[] defaultRotationChildren;
     public GameObject prefab;
     Coroutine respawnCoroutine;
 
@@ -24,9 +25,11 @@ public class PoublardRagdoll : MonoBehaviour
         }
         Transform[] tr_children = GetComponentsInChildren<Transform>();
         defaultPosChildren = new Vector3[tr_children.Length];
+        defaultRotationChildren = new Quaternion[tr_children.Length];
         for (int i = 0; i < tr_children.Length; i++)
         {
             defaultPosChildren[i] = tr_children[i].position;
+            defaultRotationChildren[i] = tr_children[i].localRotation;
         }
     }
 
@@ -87,9 +90,11 @@ public class PoublardRagdoll : MonoBehaviour
         float totalTime = 1f;
         Transform[] tr_children = GetComponentsInChildren<Transform>();
         Vector3[] finalPosChildren = new Vector3[tr_children.Length];
+        Quaternion[] finalRotationChildren = new Quaternion[tr_children.Length];
         for (int i = 0; i < tr_children.Length; i++)
         {
             finalPosChildren[i] = tr_children[i].position;
+            finalRotationChildren[i] = tr_children[i].localRotation;
         }
 
         while (timer < totalTime)
@@ -100,13 +105,17 @@ public class PoublardRagdoll : MonoBehaviour
             for (int i = 0; i < tr_children.Length; i++)
             {
                 tr_children[i].position = Vector3.Lerp(finalPosChildren[i], defaultPosChildren[i], timer / totalTime);
+                tr_children[i].localRotation = Quaternion.Lerp(finalRotationChildren[i], defaultRotationChildren[i], timer / totalTime);
             }
         }
         GameObject newRagdoll = Instantiate(prefab, transform.position, transform.rotation, transform.parent);
         newRagdoll.name = name;
-        newRagdoll.GetComponent<PoublardRagdoll>().controllerNumber = controllerNumber;
-        newRagdoll.GetComponent<PoublardRagdoll>().dead = false;
-        newRagdoll.GetComponent<PoublardRagdoll>().respawn = false;
+        PoublardRagdoll newPoublardRagdoll = newRagdoll.GetComponent<PoublardRagdoll>();
+        newPoublardRagdoll.controllerNumber = controllerNumber;
+        newPoublardRagdoll.dead = false;
+        newPoublardRagdoll.respawn = false;
+        newPoublardRagdoll.angleDirection = new Quaternion();
+        newPoublardRagdoll.vecDirection = Vector3.zero;
         Array.ForEach(newRagdoll.GetComponentsInChildren<Collider>(), x => x.enabled = true);
         Destroy(gameObject);
     }

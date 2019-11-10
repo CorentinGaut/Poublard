@@ -2921,7 +2921,7 @@ MonoBehaviour:
   punchMultiplicator: 1
   speedMultiplicator: 1
   punchForce: 150
-  jumpForce: 1500
+  jumpForce: 1000
   dead: 0
   respawn: 0
   prefab: {fileID: 5691800633283859424, guid: 42e39515f47aa3c419075771083e070c, type: 3}

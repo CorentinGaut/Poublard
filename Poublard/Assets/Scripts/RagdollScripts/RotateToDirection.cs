@@ -73,10 +73,12 @@ public class RotateToDirection : MonoBehaviour
         }
 
         //punch
-        if (Input.GetButtonDown("Character "+ poublardRagdoll.controllerNumber + " Submit"))
+        if (!disableActiveRagdoll.disableActiveRagdoll && Input.GetButtonDown("Character "+ poublardRagdoll.controllerNumber + " Submit"))
         {
             transform.parent.Find("LeftForearm").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, poublardRagdoll.punchMultiplicator * poublardRagdoll.punchForce));
             transform.parent.Find("RightForearm").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, poublardRagdoll.punchMultiplicator * poublardRagdoll.punchForce));
+            transform.parent.Find("Left Foot").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, -poublardRagdoll.punchMultiplicator * poublardRagdoll.punchForce));
+            transform.parent.Find("Right Foot").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, -poublardRagdoll.punchMultiplicator * poublardRagdoll.punchForce));
         }
         //jump
         if (!disableActiveRagdoll.disableActiveRagdoll && Input.GetButtonDown("Character " + poublardRagdoll.controllerNumber + " Cancel"))
