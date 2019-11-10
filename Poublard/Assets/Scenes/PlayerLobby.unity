@@ -391,6 +391,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1945377619}
+  - {fileID: 1636741276}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2485,6 +2486,7 @@ MonoBehaviour:
   - {fileID: 1978654783}
   - {fileID: 902497394}
   clip: {fileID: 8300000, guid: d1f2f93a810480f4c94081d6e6714df2, type: 3}
+  fadeoutPanel: {fileID: 1636741277}
 --- !u!1 &1945377618
 GameObject:
   m_ObjectHideFlags: 0

@@ -87,7 +87,7 @@ public class AddPermanentForces : MonoBehaviour
         if (x != 0.0f || y != 0.0f)
         {
             poublardRagdoll.angleDirection = Quaternion.Euler(0, (Mathf.Atan2(-y, x) * Mathf.Rad2Deg) + 90f, 0);
-            Vector3 force = zForce * (poublardRagdoll.angleDirection * new Vector3(0, 0, 1));
+            Vector3 force = poublardRagdoll.speedMultiplicator * zForce * (poublardRagdoll.angleDirection * new Vector3(0, 0, 1));
             Debug.DrawRay(transform.position, poublardRagdoll.angleDirection * new Vector3(0, 0, 300), Color.red, 2f);
             _rigidbody.AddForce(force);
         }
