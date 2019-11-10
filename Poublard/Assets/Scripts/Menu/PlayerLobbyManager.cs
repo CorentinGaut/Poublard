@@ -100,6 +100,7 @@ public class PlayerLobbyManager : MonoBehaviour
 
         GameManager.playersInputId = playerInputId;
         GameManager.nbPlayer = nbPlayer;
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 }
+    
