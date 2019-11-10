@@ -18,7 +18,7 @@ public class DisableActiveRagdoll : MonoBehaviour
     {
         if(pelvisRigidBody.transform.localPosition.z > 1.5f)
         {
-            disableActiveRagdoll = true;
+            //disableActiveRagdoll = true;
         }
 
         if (disableActiveRagdoll)
