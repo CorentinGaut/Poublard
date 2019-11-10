@@ -246,6 +246,7 @@ GameObject:
   - component: {fileID: 1539990742010069841}
   - component: {fileID: 439178408895617706}
   - component: {fileID: 8297460493572925797}
+  - component: {fileID: -3962654534122515783}
   m_Layer: 0
   m_Name: TrashContainer
   m_TagString: Untagged
@@ -312,3 +313,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.87, y: 1, z: 3.89}
   m_Center: {x: 0, y: 0.28, z: 0}
+--- !u!95 &-3962654534122515783
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8486207564519732569}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
