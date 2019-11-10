@@ -23,19 +23,19 @@ public class PoublardRagdoll : MonoBehaviour
         speedMultiplicator = 1f;
     }
 
-    public void ChangeJumpMultiplicator(float newMultiplicator = 1.5f, float time = 5f)
+    public void ChangeJumpMultiplicator(float newMultiplicator = 1.5f, float time = 15f)
     {
         jumpMultiplicator = newMultiplicator;
         CancelInvoke("ReinitJumpMultiplicator");
         Invoke("ReinitJumpMultiplicator", time);
     }
-    public void ChangePunchMultiplicator(float newMultiplicator = 3f, float time = 5f)
+    public void ChangePunchMultiplicator(float newMultiplicator = 3f, float time = 15f)
     {
         punchMultiplicator = newMultiplicator;
         CancelInvoke("ReinitPunchMultiplicator");
         Invoke("ReinitPunchMultiplicator", time);
     }
-    public void ChangeSpeedMultiplicator(float newMultiplicator = 2f, float time = 5f)
+    public void ChangeSpeedMultiplicator(float newMultiplicator = 2f, float time = 15f)
     {
         jumpMultiplicator = newMultiplicator;
         CancelInvoke("ReinitSpeedMultiplicator");

@@ -23,7 +23,7 @@ public class TrashContainer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Trash")
+        if (other.tag == "catchable")
         {
             score++;
             levelManager.TrashPickUp(nbPlayer);

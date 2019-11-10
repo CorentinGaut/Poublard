@@ -10,7 +10,7 @@ public class StrengthUp : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //other.GetComponent<CharController>().StrengthUp();
+            other.transform.parent.GetComponent<PoublardRagdoll>().ChangePunchMultiplicator();
             Instantiate(effectPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
