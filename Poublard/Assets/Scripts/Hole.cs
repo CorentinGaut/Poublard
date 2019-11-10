@@ -25,6 +25,9 @@ public class Hole : MonoBehaviour
             c.enabled = false;
         }
 
+        cc.gameObject.GetComponent<Rigidbody>().velocity = (gameObject.transform.position - cc.transform.position)*2;
+
+
         yield return new WaitForSeconds(3.0f);
 
         cc.gameObject.transform.position = gameObject.transform.position - Vector3.down * 3;
