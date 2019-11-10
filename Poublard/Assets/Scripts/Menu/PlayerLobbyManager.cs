@@ -10,6 +10,8 @@ public class PlayerLobbyManager : MonoBehaviour
 
     public AudioClip clip;
 
+    public Image fadeoutPanel;
+
     private int nbPlayer = 0;
 
     private int[] playerInputId = new int[4];
@@ -85,9 +87,19 @@ public class PlayerLobbyManager : MonoBehaviour
             }
 
 
-            GameManager.playersInputId = playerInputId;
-            GameManager.nbPlayer = nbPlayer;
-            SceneManager.LoadScene(3);
+
+            StartCoroutine("FadeOutAndLoadScene");
         }
+    }
+
+    public IEnumerator FadeOutAndLoadScene()
+    {
+        fadeoutPanel.color = new Color(fadeoutPanel.color.r, fadeoutPanel.color.g, fadeoutPanel.color.b, fadeoutPanel.color.a + 0.6f);
+
+        yield return new WaitForSeconds(2f);
+
+        GameManager.playersInputId = playerInputId;
+        GameManager.nbPlayer = nbPlayer;
+        SceneManager.LoadScene(3);
     }
 }

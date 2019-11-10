@@ -75,14 +75,14 @@ public class RotateToDirection : MonoBehaviour
         //punch
         if (Input.GetButtonDown("Character "+ poublardRagdoll.controllerNumber + " Submit"))
         {
-            transform.parent.Find("LeftForearm").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, 150f));
-            transform.parent.Find("RightForearm").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, 150f));
+            transform.parent.Find("LeftForearm").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, poublardRagdoll.punchMultiplicator * poublardRagdoll.punchForce));
+            transform.parent.Find("RightForearm").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, poublardRagdoll.punchMultiplicator * poublardRagdoll.punchForce));
         }
         //jump
         if (!disableActiveRagdoll.disableActiveRagdoll && Input.GetButtonDown("Character " + poublardRagdoll.controllerNumber + " Cancel"))
         {
             transform.parent.GetComponent<DisableActiveRagdoll>().disableActiveRagdoll = true;
-            transform.parent.Find("Pelvis").GetComponent<Rigidbody>().AddForce(new Vector3(0, 1500f));
+            transform.parent.Find("Pelvis").GetComponent<Rigidbody>().AddForce(new Vector3(0, poublardRagdoll.jumpMultiplicator * poublardRagdoll.jumpForce));
         }
         //catch left
         if (!disableActiveRagdoll.disableActiveRagdoll && Input.GetButtonDown("Character " + poublardRagdoll.controllerNumber + " LeftThumb"))

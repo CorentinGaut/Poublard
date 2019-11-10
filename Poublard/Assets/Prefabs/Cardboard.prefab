@@ -90,9 +90,10 @@ GameObject:
   - component: {fileID: 7067233889697653141}
   - component: {fileID: -7928866326263299843}
   - component: {fileID: 5984319535535558832}
+  - component: {fileID: -2548359402726992641}
   m_Layer: 0
   m_Name: Cardboard
-  m_TagString: Trash
+  m_TagString: catchable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,6 +165,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.11, z: 2.02}
   m_Center: {x: 0, y: 0.05, z: 0}
+--- !u!114 &-2548359402726992641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588250085362436069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60396754c2867194cb877d1f87884ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1659656163282754317
 GameObject:
   m_ObjectHideFlags: 0

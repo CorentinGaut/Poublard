@@ -30,6 +30,18 @@ CapsuleCollider:
   m_Height: 14.36
   m_Direction: 1
   m_Center: {x: 0, y: -1.04, z: 0}
+--- !u!114 &-3340786729118495703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365872659400474791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60396754c2867194cb877d1f87884ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6049646774880082350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45,13 +57,8 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 1895eade1a443764d86897a9ade059dd,
         type: 3}
       propertyPath: m_TagString
-      value: Trash
+      value: catchable
       objectReference: {fileID: 0}
-    - target: {fileID: -6054058774237248251, guid: 1895eade1a443764d86897a9ade059dd,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7cce38ba40b7d05439de10ddde5afaf6, type: 2}
     - target: {fileID: -4216859302048453862, guid: 1895eade1a443764d86897a9ade059dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -127,6 +134,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 29f625e1de63db74896570a8d0c51445, type: 2}
+    - target: {fileID: -6054058774237248251, guid: 1895eade1a443764d86897a9ade059dd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7cce38ba40b7d05439de10ddde5afaf6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1895eade1a443764d86897a9ade059dd, type: 3}
 --- !u!1 &2365872659400474791 stripped

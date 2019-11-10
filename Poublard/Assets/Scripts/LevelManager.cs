@@ -9,6 +9,8 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
 
+    public AudioClip levelMusic;
+
     public int totalNbTrash;
     public int nbTrashPicked;
 
@@ -55,7 +57,7 @@ public class LevelManager : MonoBehaviour
         scoresPlayers = new int[nbPlayers];
         txtTimer.text = ((int)time).ToString();
         nbTrashPicked = 0;
-       // SpawnPlayers();
+        SpawnPlayers();
         SpawnBennes();
         SpawnUI();
     }
