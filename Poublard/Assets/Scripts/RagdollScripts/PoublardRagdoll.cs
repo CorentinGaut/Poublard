@@ -46,6 +46,17 @@ public class PoublardRagdoll : MonoBehaviour
         speedMultiplicator = 1f;
     }
 
+    public void PrepareRespawn()
+    {
+        CancelInvoke("StartRespawn");
+        Invoke("StartRespawn", 5f);
+    }
+
+    void StartRespawn()
+    {
+        respawn = true;
+    }
+
     public void ChangeJumpMultiplicator(float newMultiplicator = 1.5f, float time = 15f)
     {
         jumpMultiplicator = newMultiplicator;
