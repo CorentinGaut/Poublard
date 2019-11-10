@@ -57,7 +57,7 @@ public class LevelManager : MonoBehaviour
         scoresPlayers = new int[nbPlayers];
         txtTimer.text = ((int)time).ToString();
         nbTrashPicked = 0;
-       // SpawnPlayers();
+        SpawnPlayers();
         SpawnBennes();
         SpawnUI();
     }
