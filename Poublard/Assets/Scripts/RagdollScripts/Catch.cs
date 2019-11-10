@@ -8,17 +8,20 @@ public class Catch : MonoBehaviour
     public ConfigurableJoint joint;
 
     RotateToDirection rotateToDirection;
+    PoublardRagdoll poublardRagdoll;
 
     void Start()
     {
         rotateToDirection = transform.parent.GetComponentInChildren<RotateToDirection>();
+        poublardRagdoll = GetComponentInParent<PoublardRagdoll>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        bool catchButtonPressed = Input.GetButtonDown("Fire3") && name == "LeftForearm";
-        catchButtonPressed = catchButtonPressed || Input.GetButtonDown("Jump") && name == "RightForearm";
+        //un-catch
+        bool catchButtonPressed = Input.GetButtonDown("Character " + poublardRagdoll.controllerNumber + " LeftThumb") && name == "LeftForearm";
+        catchButtonPressed = catchButtonPressed || Input.GetButtonDown("Character " + poublardRagdoll.controllerNumber + " RightThumb") && name == "RightForearm";
         if (catchButtonPressed && joint != null)
         {
             Destroy(joint);

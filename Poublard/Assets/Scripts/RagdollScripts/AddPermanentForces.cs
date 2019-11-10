@@ -80,10 +80,10 @@ public class AddPermanentForces : MonoBehaviour
     {
         Quaternion rotation = transform.parent.Find("Pelvis").transform.rotation;
         
-        Vector3 stickDir = new Vector3(0, Mathf.Atan2(Input.GetAxis("LeftJoystickY"), Input.GetAxis("LeftJoystickX")) * 180 / Mathf.PI, 0);
+        Vector3 stickDir = new Vector3(0, Mathf.Atan2(Input.GetAxis("Character " + poublardRagdoll.controllerNumber + " Vertical"), Input.GetAxis("Character " + poublardRagdoll.controllerNumber + " Horizontal")) * 180 / Mathf.PI, 0);
 
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
+        float x = Input.GetAxis("Character " + poublardRagdoll.controllerNumber + " Horizontal");
+        float y = Input.GetAxis("Character " + poublardRagdoll.controllerNumber + " Vertical");
         if (x != 0.0f || y != 0.0f)
         {
             poublardRagdoll.angleDirection = Quaternion.Euler(0, (Mathf.Atan2(-y, x) * Mathf.Rad2Deg) + 90f, 0);

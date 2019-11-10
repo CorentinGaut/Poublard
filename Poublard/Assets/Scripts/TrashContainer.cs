@@ -29,6 +29,7 @@ public class TrashContainer : MonoBehaviour
             levelManager.TrashPickUp(nbPlayer);
             Destroy(other.gameObject);
             txtScore.text = score.ToString();
+            this.GetComponent<Animator>().SetTrigger("trashInside");
         }
     }
 }
