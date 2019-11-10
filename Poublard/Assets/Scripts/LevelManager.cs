@@ -20,6 +20,7 @@ public class LevelManager : MonoBehaviour
     public Transform[] SpawnPoints;
     public GameObject[] bennes;
     public CharController[] Characters;
+    public GameObject[] uiTrash;
 
     public float time;
 
@@ -38,11 +39,14 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        nbPlayers = GameManager.nbPlayer;
+        //nbPlayers = GameManager.nbPlayer;
+        //nbPlayers = 3;
         scoresPlayers = new int[nbPlayers];
         txtTimer.text = ((int)time).ToString();
         nbTrashPicked = 0;
-        SpawnPlayers();
+       // SpawnPlayers();
+        SpawnBennes();
+        SpawnUI();
     }
 
     public void SpawnPlayers()
@@ -58,6 +62,16 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i < nbPlayers; i++)
         {
             bennes[i].SetActive(true);
+
+        }
+    }
+
+    public void SpawnUI()
+    {
+        for (int i = 0; i < nbPlayers; i++)
+        {
+            uiTrash[i].SetActive(true);
+
         }
     }
 
