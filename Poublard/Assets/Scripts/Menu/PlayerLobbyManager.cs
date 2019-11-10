@@ -6,139 +6,80 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLobbyManager : MonoBehaviour
 {
-    public GameObject player1Selection;
-    public GameObject player2Selection;
-    public GameObject player3Selection;
-    public GameObject player4Selection;
+    public GameObject[] playerSelections = new GameObject[4];
 
     public GameManager gameManager;
 
     private int nbPlayer = 0;
 
-    private bool player1play = false;
-    private bool player2play = false;
-    private bool player3play = false;
-    private bool player4play = false;
+    private int[] playerInputId = new int[4];
+
+    private bool[] inputId = new bool[4];
     // Start is called before the first frame update
     void Start()
     {
-        
+        for (int i = 0; i < playerInputId.Length; i++)
+        {
+            playerInputId[i] = -1;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Character 1 Submit"))
+        if (Input.GetButtonDown("Character 1 Submit") && inputId[0] == false)
         {
-            if (player1play == false)
-            {
-                player1Selection.transform.Find("pressAToJoin").gameObject.SetActive(false);
-                player1Selection.transform.Find("playerDummy").gameObject.SetActive(true);
-                player1play = true;
-                nbPlayer++;
-            }
-            else
-            {
-                player1Selection.transform.Find("pressAToJoin").gameObject.SetActive(true);
-                player1Selection.transform.Find("playerDummy").gameObject.SetActive(false);
-                player1play = false;
-                nbPlayer--;
-            }
+            Debug.Log("Manette 1");
+            playerSelections[nbPlayer].transform.Find("pressAToJoin").gameObject.SetActive(false);
+            playerSelections[nbPlayer].transform.Find("playerDummy").gameObject.SetActive(true);
+            playerInputId[nbPlayer] = 1;
+            inputId[0] = true;
+            nbPlayer++;
         }
 
-        if (Input.GetButtonDown("Character 2 Submit"))
+        if (Input.GetButtonDown("Character 2 Submit") && inputId[1] == false)
         {
-            if (player2play == false)
-            {
-                player2Selection.transform.Find("pressAToJoin").gameObject.SetActive(false);
-                player2Selection.transform.Find("playerDummy").gameObject.SetActive(true);
-                player2play = true;
-                nbPlayer++;
-            }
-            else
-            {
-                player2Selection.transform.Find("pressAToJoin").gameObject.SetActive(true);
-                player2Selection.transform.Find("playerDummy").gameObject.SetActive(false);
-                player2play = false;
-                nbPlayer--;
-            }
+            Debug.Log("Manette 2");
+            playerSelections[nbPlayer].transform.Find("pressAToJoin").gameObject.SetActive(false);
+            playerSelections[nbPlayer].transform.Find("playerDummy").gameObject.SetActive(true);
+            playerInputId[nbPlayer] = 2;
+            inputId[1] = true;
+            nbPlayer++;
         }
 
-        if (Input.GetButtonDown("Character 3 Submit"))
+        if (Input.GetButtonDown("Character 3 Submit")&& inputId[2] == false)
         {
-            if (player3play == false)
-            {
-                player3Selection.transform.Find("pressAToJoin").gameObject.SetActive(false);
-                player3Selection.transform.Find("playerDummy").gameObject.SetActive(true);
-                player3play = true;
-                nbPlayer++;
-            }
-            else
-            {
-                player3Selection.transform.Find("pressAToJoin").gameObject.SetActive(true);
-                player3Selection.transform.Find("playerDummy").gameObject.SetActive(false);
-                player3play = false;
-                nbPlayer--;
-            }
+            Debug.Log("Manette 3");
+            playerSelections[nbPlayer].transform.Find("pressAToJoin").gameObject.SetActive(false);
+            playerSelections[nbPlayer].transform.Find("playerDummy").gameObject.SetActive(true);
+            playerInputId[nbPlayer] = 3;
+            inputId[2] = true;
+            nbPlayer++;
         }
 
-        if (Input.GetButtonDown("Character 4 Submit"))
+        if (Input.GetButtonDown("Character 4 Submit") && inputId[3] == false)
         {
-            if (player4play == false)
-            {
-                player4Selection.transform.Find("pressAToJoin").gameObject.SetActive(false);
-                player4Selection.transform.Find("playerDummy").gameObject.SetActive(true);
-                player4play = true;
-                nbPlayer++;
-            }
-            else
-            {
-                player4Selection.transform.Find("pressAToJoin").gameObject.SetActive(true);
-                player4Selection.transform.Find("playerDummy").gameObject.SetActive(false);
-                player4play = false;
-                nbPlayer--;
-            }
+            Debug.Log("Manette 4");
+            playerSelections[nbPlayer].transform.Find("pressAToJoin").gameObject.SetActive(false);
+            playerSelections[nbPlayer].transform.Find("playerDummy").gameObject.SetActive(true);
+            playerInputId[nbPlayer] = 4;
+            inputId[3] = true;
+            nbPlayer++;
         }
-
 
 
 
         //VALIDATION DE LA SELECTION
-        if (nbPlayer == 1)
+        if (Input.GetButtonDown("Character 1 Start") || Input.GetButtonDown("Character 2 Start") || Input.GetButtonDown("Character 3 Start")|| Input.GetButtonDown("Character 4 Start"))
         {
-            if (Input.GetButtonDown("Character 1 Start"))
+            for (int i = 0; i < playerInputId.Length; i++)
             {
-                Debug.Log(nbPlayer);
-                GameManager.nbPlayer = nbPlayer;
-                SceneManager.LoadScene(3);
+                Debug.Log(i +" :" +playerInputId[i]);
             }
-        }
-        else if (nbPlayer == 2)
-        {
-            if (Input.GetButtonDown("Character 1 Start") || Input.GetButtonDown("Character 2 Start"))
-            {
-                Debug.Log(nbPlayer);
-                GameManager.nbPlayer = nbPlayer;
-                SceneManager.LoadScene(3);
-            }
-        }
-        else if (nbPlayer == 3)
-        {
-            if (Input.GetButtonDown("Character 1 Start") || Input.GetButtonDown("Character 2 Start") || Input.GetButtonDown("Character 3 Start"))
-            {
-                Debug.Log(nbPlayer);
-                GameManager.nbPlayer = nbPlayer;
-                SceneManager.LoadScene(3);
-            }
-        }
-        else if (nbPlayer == 4)
-        {
-            if (Input.GetButtonDown("Character 1 Start") || Input.GetButtonDown("Character 2 Start") || Input.GetButtonDown("Character 3 Start") || Input.GetButtonDown("Character 4 Start"))
-            {
-                Debug.Log(nbPlayer);
-                GameManager.nbPlayer = nbPlayer;
-                SceneManager.LoadScene(3);
-            }
+
+            GameManager.playersInputId = playerInputId;
+            GameManager.nbPlayer = nbPlayer;
+            SceneManager.LoadScene(3);
         }
     }
 }

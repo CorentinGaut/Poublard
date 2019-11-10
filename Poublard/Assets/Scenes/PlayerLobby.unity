@@ -1888,10 +1888,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5157e4bd0ee948418f0a4eb070f62c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1Selection: {fileID: 93689962}
-  player2Selection: {fileID: 1778449181}
-  player3Selection: {fileID: 1978654783}
-  player4Selection: {fileID: 902497394}
+  playerSelections:
+  - {fileID: 93689962}
+  - {fileID: 1778449181}
+  - {fileID: 1978654783}
+  - {fileID: 902497394}
   gameManager: {fileID: 0}
 --- !u!1 &1945377618
 GameObject:

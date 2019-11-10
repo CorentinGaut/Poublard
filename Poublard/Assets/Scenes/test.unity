@@ -1131,10 +1131,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targets: []
-  offset: {x: 0, y: 60, z: -40}
+  offset: {x: 20, y: 60, z: 0}
   smoothTime: 0.5
-  minZoom: 120
-  maxZoom: 10
+  minZoom: 100
+  maxZoom: 50
   zoomLimiter: 100
 --- !u!1001 &574916051
 PrefabInstance:

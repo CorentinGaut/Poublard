@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public static int nbPlayer = 0;
+    public static int[] playersInputId;
 
     public static GameManager Instance { get { return instance; } }
 
