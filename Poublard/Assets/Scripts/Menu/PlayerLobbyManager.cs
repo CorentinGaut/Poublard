@@ -8,7 +8,7 @@ public class PlayerLobbyManager : MonoBehaviour
 {
     public GameObject[] playerSelections = new GameObject[4];
 
-    public GameManager gameManager;
+    public AudioClip clip;
 
     private int nbPlayer = 0;
 
@@ -76,6 +76,14 @@ public class PlayerLobbyManager : MonoBehaviour
             {
                 Debug.Log(i +" :" +playerInputId[i]);
             }
+
+            if (clip != null)
+            {
+                GameObject.Find("GameManager").GetComponent<AudioSource>().loop = false;
+                GameObject.Find("GameManager").GetComponent<AudioSource>().clip = clip;
+                GameObject.Find("GameManager").GetComponent<AudioSource>().Play();
+            }
+
 
             GameManager.playersInputId = playerInputId;
             GameManager.nbPlayer = nbPlayer;
