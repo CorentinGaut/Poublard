@@ -90,6 +90,7 @@ public class AddPermanentForces : MonoBehaviour
             Vector3 force = poublardRagdoll.speedMultiplicator * zForce * (poublardRagdoll.angleDirection * new Vector3(0, 0, 1));
             Debug.DrawRay(transform.position, poublardRagdoll.angleDirection * new Vector3(0, 0, 300), Color.red, 2f);
             _rigidbody.AddForce(force);
+
         }
     }
 
