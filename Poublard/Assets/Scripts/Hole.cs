@@ -5,6 +5,14 @@ using UnityEngine;
 public class Hole : MonoBehaviour
 {
     public float ejectionForce;
+    public GameObject exit;
+    public Vector3 ejectionVector;
+    public float maxAngle;
+
+    private void Start()
+    {
+        ejectionVector = exit.transform.up;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -30,14 +38,14 @@ public class Hole : MonoBehaviour
 
         yield return new WaitForSeconds(3.0f);
 
-        cc.gameObject.transform.position = gameObject.transform.position - Vector3.down * 3;
+        cc.gameObject.transform.position = exit.transform.position - Vector3.down * 3;
         cc.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
-        float angle = UnityEngine.Random.Range(-Mathf.PI, Mathf.PI);
+        float angle = UnityEngine.Random.Range(-maxAngle*Mathf.Deg2Rad, maxAngle * Mathf.Deg2Rad);
 
         foreach (Collider c in cols)
         {
-            c.GetComponent<Rigidbody>().AddForce(new Vector3(Mathf.Cos(angle) * ejectionForce, ejectionForce, Mathf.Sin(angle) *ejectionForce), ForceMode.Impulse);
+            c.GetComponent<Rigidbody>().AddForce(ejectionVector + new Vector3(Mathf.Cos(angle) * ejectionForce, ejectionForce, Mathf.Sin(angle) *ejectionForce), ForceMode.Impulse);
         }
         
         yield return new WaitForSeconds(1.5f);
