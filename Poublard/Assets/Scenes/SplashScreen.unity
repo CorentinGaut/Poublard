@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 7bdb7c7f27059be469b0b5ea319420e7, type: 3}
+  setLoop: 0
 --- !u!4 &188917946
 Transform:
   m_ObjectHideFlags: 0

@@ -1893,7 +1893,7 @@ MonoBehaviour:
   - {fileID: 1778449181}
   - {fileID: 1978654783}
   - {fileID: 902497394}
-  gameManager: {fileID: 0}
+  clip: {fileID: 8300000, guid: d1f2f93a810480f4c94081d6e6714df2, type: 3}
 --- !u!1 &1945377618
 GameObject:
   m_ObjectHideFlags: 0
