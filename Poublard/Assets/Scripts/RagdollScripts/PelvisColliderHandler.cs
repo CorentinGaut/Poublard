@@ -12,7 +12,7 @@ public class PelvisColliderHandler : MonoBehaviour
         if(collision.collider.tag == "ground")
         {
             Invoke("ReactivateActiveRagdoll", 1f);
-            
+            Debug.Log("ZZZ");            
         }
     }
 

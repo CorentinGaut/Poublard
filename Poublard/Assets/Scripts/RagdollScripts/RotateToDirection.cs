@@ -73,19 +73,19 @@ public class RotateToDirection : MonoBehaviour
         }
 
         //punch
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Character "+ poublardRagdoll.controllerNumber +" Start"))
         {
             transform.parent.Find("LeftForearm").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, 150f));
             transform.parent.Find("RightForearm").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, 150f));
         }
         //jump
-        if (!disableActiveRagdoll.disableActiveRagdoll && Input.GetButtonDown("Fire2"))
+        if (!disableActiveRagdoll.disableActiveRagdoll && Input.GetButtonDown("Character " + poublardRagdoll.controllerNumber + " Cancel"))
         {
             transform.parent.GetComponent<DisableActiveRagdoll>().disableActiveRagdoll = true;
             transform.parent.Find("Pelvis").GetComponent<Rigidbody>().AddForce(new Vector3(0, 1500f));
         }
-        //catch
-        if (!disableActiveRagdoll.disableActiveRagdoll && Input.GetButtonDown("Fire3"))
+        //catch left
+        if (!disableActiveRagdoll.disableActiveRagdoll && Input.GetButtonDown("Character " + poublardRagdoll.controllerNumber + " LeftThumb"))
         {
             if (catchState == CatchState.none)
             {
@@ -93,8 +93,8 @@ public class RotateToDirection : MonoBehaviour
                 Invoke("StopCatching", 2f);
             }
         }
-        //catch
-        if (!disableActiveRagdoll.disableActiveRagdoll && Input.GetButtonDown("Jump"))
+        //catch right
+        if (!disableActiveRagdoll.disableActiveRagdoll && Input.GetButtonDown("Character " + poublardRagdoll.controllerNumber + " RightThumb"))
         {
             if (catchState == CatchState.none)
             {
@@ -116,13 +116,14 @@ public class RotateToDirection : MonoBehaviour
             transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(transform.localRotation.x, transform.localRotation.y, poublardRagdoll.angleDirection.eulerAngles.y), Time.fixedDeltaTime * 15f);
         }
 
-        if (Mathf.Abs(Input.GetAxis("RightStickX")) < 0.2f) {
+        float rightAxisXValue = Input.GetAxis("Character " + poublardRagdoll.controllerNumber + " RightStickX");
+        if (Mathf.Abs(rightAxisXValue) < 0.2f) {
         }
-        else if(Input.GetAxis("RightStickX") > 0)
+        else if(rightAxisXValue > 0)
         {
             _rigidbody.AddTorque(new Vector3(0, 100f), 0);
         }
-        else if(Input.GetAxis("RightStickX") < 0)
+        else if(rightAxisXValue < 0)
         {
             _rigidbody.AddTorque(new Vector3(0, -100f), 0);
         }

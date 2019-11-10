@@ -6,4 +6,5 @@ public class PoublardRagdoll : MonoBehaviour
 {
     public Quaternion angleDirection;
     public Vector3 vecDirection;
+    public int controllerNumber;
 }
