@@ -1,9 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CharController : MonoBehaviour
 {
+    public int id;
+    public bool isDead = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +18,26 @@ public class CharController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    internal void Play()
+    {
+        isDead = false;
+        gameObject.SetActive(!isDead);
+    }
+    public void Die()
+    {
+        isDead = true;
+        gameObject.SetActive(!isDead);
+        CameraZoom.instance.targets.Remove(this.transform);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ennemi"))
+        {
+            Die();
+            LevelManager.instance.SpawnPlayer(id);
+        }
     }
 }
