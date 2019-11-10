@@ -73,7 +73,7 @@ public class RotateToDirection : MonoBehaviour
         }
 
         //punch
-        if (Input.GetButtonDown("Character "+ poublardRagdoll.controllerNumber +" Start"))
+        if (Input.GetButtonDown("Character "+ poublardRagdoll.controllerNumber + " Submit"))
         {
             transform.parent.Find("LeftForearm").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, 150f));
             transform.parent.Find("RightForearm").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, 150f));
