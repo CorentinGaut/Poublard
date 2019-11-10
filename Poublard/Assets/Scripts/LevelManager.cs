@@ -15,10 +15,11 @@ public class LevelManager : MonoBehaviour
     public int nbTrashPicked;
 
     public int nbTrashRequired;
-    public float completionPercentageRequired;
     public int nbPlayers;
 
+
     public int[] scoresPlayers;
+    public GameObject[] scorePanels;
     public Text[] scoresPlayersEnd;
     public Sprite[] rankImages;
     public Image[] rankImagesEnd;
@@ -115,11 +116,7 @@ public class LevelManager : MonoBehaviour
 
     public void TrashPickUp(int nbPlayer)
     {
-        if (nbPlayer >= nbPlayers)
-            return;
         scoresPlayers[nbPlayer-1]++;
-                nbTrashRequired = (int)((float)totalNbTrash *completionPercentageRequired/100.0f);
-
         nbTrashPicked++;
         float fillAmount = (float)nbTrashPicked / (float)nbTrashRequired;
         txtGlobalScore.text = ((int)(fillAmount * 100.0f)).ToString()+"%";
@@ -130,6 +127,10 @@ public class LevelManager : MonoBehaviour
     public void DisplayWinners()
     {
         RankPlayers();
+        for(int i = 0;i<nbPlayers;i++)
+        {
+            scorePanels[i].SetActive(true);
+        }
         txtGlobalScoreEnd.text += ((int)((float)nbTrashPicked*100 / (float)nbTrashRequired)).ToString() + "%" ;
         if ((float) nbTrashPicked / (float)nbTrashRequired>=1)
         {
