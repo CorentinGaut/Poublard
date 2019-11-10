@@ -254,6 +254,7 @@ MonoBehaviour:
   - {fileID: 1063412427757871498, guid: cd54ee8142fa0d34e898ad6e7aeb4ba5, type: 3}
   - {fileID: 941629270079015883, guid: 06af5c8c7b1bec2448229e81bfc9bcf7, type: 3}
   - {fileID: 671614274407816024, guid: 28b998657d6fe3d448fa8344ab47a630, type: 3}
+  - {fileID: 3140995245977174723, guid: a8429a01e6fbd934badb6feb30775712, type: 3}
   lvlManager: {fileID: 0}
   nbTrashSpawned: 60
   minPosX: -5

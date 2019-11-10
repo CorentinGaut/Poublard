@@ -1,5 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!54 &2040233443
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4818934095389565775}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &2040233442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4818934095389565775}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7259873, y: 2.63623, z: 1.5828483}
+  m_Center: {x: -0.08315364, y: -0.035616603, z: -0.057168223}
 --- !u!1001 &3585329371545205318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,7 +39,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 323bb119446e16945bf7de5f743f98f7,
         type: 3}
       propertyPath: m_Name
-      value: TrashBen
+      value: TrashBen Variant
       objectReference: {fileID: 0}
     - target: {fileID: -7673886404300160364, guid: 323bb119446e16945bf7de5f743f98f7,
         type: 3}
@@ -25,17 +54,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 323bb119446e16945bf7de5f743f98f7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.091887
+      value: -46.557663
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 323bb119446e16945bf7de5f743f98f7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8
+      value: 1.8554
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 323bb119446e16945bf7de5f743f98f7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.2474117
+      value: 42.625
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 323bb119446e16945bf7de5f743f98f7,
         type: 3}
@@ -77,6 +106,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 323bb119446e16945bf7de5f743f98f7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.73107
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 323bb119446e16945bf7de5f743f98f7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.73107
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 323bb119446e16945bf7de5f743f98f7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.73107
+      objectReference: {fileID: 0}
     - target: {fileID: 1711277887553122256, guid: 323bb119446e16945bf7de5f743f98f7,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -94,3 +138,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5ce42780203ea3f4189d5694e3e69be5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 323bb119446e16945bf7de5f743f98f7, type: 3}
+--- !u!1 &4818934095389565775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 323bb119446e16945bf7de5f743f98f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3585329371545205318}
+  m_PrefabAsset: {fileID: 0}
