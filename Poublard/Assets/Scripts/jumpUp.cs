@@ -10,7 +10,7 @@ public class jumpUp : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<PoublardRagdoll>().ChangeJumpMultiplicator();
+            other.transform.parent.GetComponent<PoublardRagdoll>().ChangeJumpMultiplicator();
             Instantiate(effectPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

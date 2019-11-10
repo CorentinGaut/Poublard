@@ -10,7 +10,7 @@ public class SpeedUp : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<PoublardRagdoll>().ChangeSpeedMultiplicator();
+            other.transform.parent.GetComponent<PoublardRagdoll>().ChangeSpeedMultiplicator();
             Instantiate(effectPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
