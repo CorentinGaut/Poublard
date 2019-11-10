@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour
 
     public int[] scoresPlayers;
     public Transform[] SpawnPoints;
+    public GameObject[] bennes;
     public CharController[] Characters;
 
     public float time;
@@ -49,6 +50,14 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i < nbPlayers; i++)
         {
             SpawnPlayer(i);
+        }
+    }
+
+    public void SpawnBennes()
+    {
+        for (int i = 0; i < nbPlayers; i++)
+        {
+            bennes[i].SetActive(true);
         }
     }
 
