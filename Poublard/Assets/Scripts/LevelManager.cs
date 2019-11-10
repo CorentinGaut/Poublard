@@ -17,14 +17,24 @@ public class LevelManager : MonoBehaviour
     public int nbPlayers;
 
     public int[] scoresPlayers;
+    public Text[] scoresPlayersEnd;
+    public Sprite[] rankImages;
+    public Image[] rankImagesEnd;
+    public int[] rankPlayers;
     public Transform[] SpawnPoints;
     public GameObject[] bennes;
     public CharController[] Characters;
     public GameObject[] uiTrash;
 
+
     public float time;
+    public bool scoreDisplayed;
 
     public Text txtGlobalScore;
+    public Text txtGlobalScoreEnd;
+    public GameObject panelEndVictory;
+    public GameObject panelEndDefeat;
+
     public Text txtTimer;
     public Image imageGlobalScore;
 
@@ -41,6 +51,7 @@ public class LevelManager : MonoBehaviour
     {
         //nbPlayers = GameManager.nbPlayer;
         //nbPlayers = 3;
+        scoreDisplayed = false;
         scoresPlayers = new int[nbPlayers];
         txtTimer.text = ((int)time).ToString();
         nbTrashPicked = 0;
@@ -62,7 +73,6 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i < nbPlayers; i++)
         {
             bennes[i].SetActive(true);
-
         }
     }
 
@@ -91,7 +101,13 @@ public class LevelManager : MonoBehaviour
         if (time <= 0) //fin de partie
         {
             Time.timeScale = 0f;
-            endGameCanvas.gameObject.SetActive(true);
+            if(scoreDisplayed == false)
+            {
+                endGameCanvas.gameObject.SetActive(true);
+                DisplayWinners();
+                scoreDisplayed = true;
+            }
+
         }
     }
 
@@ -107,6 +123,43 @@ public class LevelManager : MonoBehaviour
         txtGlobalScore.text = ((int)(fillAmount * 100.0f)).ToString()+"%";
         imageGlobalScore.fillAmount = fillAmount;
         imageGlobalScore.color = new Vector4(1 -  fillAmount, 1 * fillAmount, 0,1);
+    }
+
+    public void DisplayWinners()
+    {
+        RankPlayers();
+        txtGlobalScoreEnd.text += ((int)((float)nbTrashPicked*100 / (float)nbTrashRequired)).ToString() + "%" ;
+        if ((float) nbTrashPicked / (float)nbTrashRequired>=1)
+        {
+            panelEndVictory.SetActive(true);
+            panelEndDefeat.SetActive(false);
+        }
+        else
+        {
+            panelEndVictory.SetActive(false);
+            panelEndDefeat.SetActive(true);
+        }
+    }
+
+    private void RankPlayers()
+    {
+        rankPlayers = new int[nbPlayers];
+        for (int i = 0; i < nbPlayers; i++)
+        {
+            int maxScorePlayer = -1;
+            int indexStrongestPlayer = -1;
+            for(int j = 0;j<nbPlayers;j++)
+            {
+                if(maxScorePlayer< scoresPlayers[j])
+                {
+                    maxScorePlayer = scoresPlayers[j];
+                    indexStrongestPlayer = j;
+                }
+            }
+            scoresPlayersEnd[indexStrongestPlayer].text += maxScorePlayer;
+            rankImagesEnd[indexStrongestPlayer].sprite = rankImages[i];
+            scoresPlayers[indexStrongestPlayer] = -2;
+        }
     }
 
     public void ReloadScene()
