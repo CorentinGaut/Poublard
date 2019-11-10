@@ -319,6 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   groundGO: {fileID: 0}
+  stairYForce: 75
 --- !u!1 &1584873245
 GameObject:
   m_ObjectHideFlags: 0
@@ -2921,6 +2922,9 @@ MonoBehaviour:
   speedMultiplicator: 1
   punchForce: 150
   jumpForce: 1500
+  dead: 0
+  respawn: 0
+  prefab: {fileID: 5691800633283859424, guid: 290aaee3125e4e540b8c8b9baf915668, type: 3}
 --- !u!1 &8547665607173912302
 GameObject:
   m_ObjectHideFlags: 0
