@@ -41,6 +41,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: parpaing Variant
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: c4c8f27032eef3b4a9c4cb286fe5e544,
+        type: 3}
+      propertyPath: m_TagString
+      value: Trash
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c4c8f27032eef3b4a9c4cb286fe5e544,
         type: 3}
       propertyPath: m_LocalPosition.x
