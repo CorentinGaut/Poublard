@@ -114,7 +114,7 @@ public class LevelManager : MonoBehaviour
         time -= Time.deltaTime;
         txtTimer.text = ((int)time).ToString();
 
-        if (time <= 60f)
+        if (time <= 30f)
         {
             musicPlayer.GetComponent<AudioSource>().pitch = 1.3f;
         }
