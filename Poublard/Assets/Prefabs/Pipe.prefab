@@ -231,10 +231,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199d0ff7653e68a4c94dc12621a5858a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ejectionForce: 0
-  exit: {fileID: 0}
+  ejectionForce: 3
+  exit: {fileID: 7599811490468634121}
   ejectionVector: {x: 0, y: 0, z: 0}
-  maxAngle: 0
+  maxAngle: 10
 --- !u!1 &7842095553414122873
 GameObject:
   m_ObjectHideFlags: 0

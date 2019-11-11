@@ -45,17 +45,17 @@ public class Hole : MonoBehaviour
 
         yield return new WaitForSeconds(1.0f);
 
-        cc.gameObject.transform.position = exit.transform.position - Vector3.down*3;
+        cc.gameObject.transform.position = exit.transform.position - Vector3.down*5;
         cc.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
         float angle = UnityEngine.Random.Range(-maxAngle*Mathf.Deg2Rad, maxAngle * Mathf.Deg2Rad);
 
-        cc.GetComponent<Rigidbody>().velocity = (ejectionVector + new Vector3(Mathf.Cos(angle) * ejectionForce, ejectionForce, Mathf.Sin(angle) *ejectionForce));
+        cc.GetComponent<Rigidbody>().velocity = (ejectionVector*ejectionForce + new Vector3(Mathf.Cos(angle) * ejectionForce, ejectionForce, Mathf.Sin(angle) * ejectionForce));
         foreach (Renderer r in rends)
         {
             r.enabled = true;
         }       
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(0.2f);
 
 
 
