@@ -10,7 +10,7 @@ public class PoublardRagdoll : MonoBehaviour
     public Vector3 vecDirection;
     public int controllerNumber;
     public float jumpMultiplicator = 1f, punchMultiplicator = 1f, speedMultiplicator = 1f;
-    public float punchForce = 150f, jumpForce = 1500f;
+    public float punchForce = 150f, jumpForce = 1500f, walkForce = 140;
     public bool dead = false, respawn = false;
     Vector3[] defaultPosChildren;
     Quaternion[] defaultRotationChildren;
@@ -31,6 +31,8 @@ public class PoublardRagdoll : MonoBehaviour
             defaultPosChildren[i] = tr_children[i].position;
             defaultRotationChildren[i] = tr_children[i].localRotation;
         }
+
+        transform.Find("Pelvis").GetComponent<AddPermanentForces>().zForce = walkForce;
     }
 
     void ReinitJumpMultiplicator()
