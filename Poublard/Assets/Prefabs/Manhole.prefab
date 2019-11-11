@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 1198916017874589941}
   - component: {fileID: 7179910180644514433}
   - component: {fileID: 258267588}
+  - component: {fileID: -7534709048389218679}
   m_Layer: 0
   m_Name: Manhole
   m_TagString: Untagged
@@ -257,15 +258,33 @@ MonoBehaviour:
   - {fileID: 3140995245977174723, guid: a8429a01e6fbd934badb6feb30775712, type: 3}
   lvlManager: {fileID: 0}
   nbTrashSpawned: 60
+  spawnSound: {fileID: 0}
+  soundPlayerPrefab: {fileID: 0}
   minPosX: -5
   minPosZ: 18
   maxPosX: 10
   maxPosZ: 45
   ejectionDistance: 5
   ejectionDistanceMultiplicator: 1.5
-  maxTrashEjectionTime: 0
-  minTrashEjectionTime: 0
+  maxTrashEjectionTime: 15
+  minTrashEjectionTime: 6
   ejectionTimer: 0
+--- !u!114 &-7534709048389218679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4370032239095714493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 199d0ff7653e68a4c94dc12621a5858a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ejectionForce: 3
+  exit: {fileID: 4370032239095714493}
+  ejectionVector: {x: 0, y: 0, z: 0}
+  maxAngle: 60
 --- !u!1 &7597701612212548472
 GameObject:
   m_ObjectHideFlags: 0
