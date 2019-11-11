@@ -69,6 +69,7 @@ public class LevelManager : MonoBehaviour
         musicPlayer.audioClip = levelMusic;
         musicPlayer.loop = true;
         musicPlayer.timeBeforeDestroy = 1000f;
+        musicPlayer.volume = 1f;
     }
 
     public void SpawnPlayers()
