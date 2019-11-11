@@ -8,6 +8,7 @@ TagManager:
   - Ennemi
   - ground
   - catchable
+  - member
   layers:
   - Default
   - TransparentFX
