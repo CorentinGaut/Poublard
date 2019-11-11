@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7523567253341696937}
   - component: {fileID: 7523567253341696934}
   - component: {fileID: 7523567253341696935}
-  - component: {fileID: 7523567253341696932}
   - component: {fileID: 7523567253341696933}
   - component: {fileID: -8919861448253358727}
+  - component: {fileID: 6638385848065156025}
   m_Layer: 0
   m_Name: Poubelle
   m_TagString: catchable
@@ -81,20 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &7523567253341696932
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7523567253341696930}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.27507758
-  m_Height: 1.4262127
-  m_Direction: 1
-  m_Center: {x: 0.020308018, y: 0.18, z: 0.19396567}
 --- !u!54 &7523567253341696933
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -123,3 +109,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60396754c2867194cb877d1f87884ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6638385848065156025
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523567253341696930}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8220562, y: 1.0846915, z: 0.40553474}
+  m_Center: {x: -0.06881094, y: 0.22188243, z: 0.20901553}
