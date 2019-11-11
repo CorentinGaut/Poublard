@@ -98,7 +98,7 @@ public class PoublardRagdoll : MonoBehaviour
             SoundPlayer spawnSoundPlayer = Instantiate(soundPlayerPrefab, gameObject.transform.position, Quaternion.identity);
             spawnSoundPlayer.timeBeforeDestroy = 1f;
             spawnSoundPlayer.loop = false;
-            spawnSoundPlayer.volume = 0.4f;
+            spawnSoundPlayer.volume = 1f;
             spawnSoundPlayer.audioClip = respawnSound;
 
         } else
