@@ -100,7 +100,7 @@ public class PlayerLobbyManager : MonoBehaviour
 
         GameManager.playersInputId = playerInputId;
         GameManager.nbPlayer = nbPlayer;
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("Corentin");
     }
 }
     

@@ -190,12 +190,14 @@ public class LevelManager : MonoBehaviour
     }
 
     public void ReloadScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
+    {        
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("Corentin");
     }
 
     public void LoadScene(string scene)
-    {
+    {             
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(scene);
     }
 }
