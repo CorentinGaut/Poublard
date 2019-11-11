@@ -13,6 +13,12 @@ public class PelvisColliderHandler : MonoBehaviour
         {
             Invoke("ReactivateActiveRagdoll", 1f);
         }
+        else if(collision.collider.tag == "Ennemi")
+        {
+            GetComponentInParent<PoublardRagdoll>().dead = true;
+            GetComponentInParent<PoublardRagdoll>().PrepareRespawn();
+            GetComponent<Collider>().enabled = false;
+        }
     }
 
     void ReactivateActiveRagdoll()

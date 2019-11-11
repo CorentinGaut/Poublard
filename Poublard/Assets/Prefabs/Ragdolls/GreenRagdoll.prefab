@@ -2920,9 +2920,15 @@ MonoBehaviour:
   controllerNumber: 1
   jumpMultiplicator: 1.5
   punchMultiplicator: 1
+<<<<<<< HEAD
   speedMultiplicator: 1.5
   punchForce: 600
   jumpForce: 1500
+=======
+  speedMultiplicator: 1
+  punchForce: 150
+  jumpForce: 1000
+>>>>>>> master
   dead: 0
   respawn: 0
   prefab: {fileID: 5691800633283859424, guid: 4384357fcebe8834684bbd5bf27eee6c, type: 3}

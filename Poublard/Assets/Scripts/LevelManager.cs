@@ -147,6 +147,8 @@ public class LevelManager : MonoBehaviour
     private void RankPlayers()
     {
         rankPlayers = new int[nbPlayers];
+        int previousScore = -1;
+        int previousRank = -1;
         for (int i = 0; i < nbPlayers; i++)
         {
             int maxScorePlayer = -1;
@@ -159,8 +161,19 @@ public class LevelManager : MonoBehaviour
                     indexStrongestPlayer = j;
                 }
             }
-            scoresPlayersEnd[indexStrongestPlayer].text += maxScorePlayer;
-            rankImagesEnd[indexStrongestPlayer].sprite = rankImages[i];
+
+            if(previousScore == maxScorePlayer)
+            {
+                scoresPlayersEnd[indexStrongestPlayer].text += maxScorePlayer;
+                rankImagesEnd[indexStrongestPlayer].sprite = rankImages[previousRank];
+            }
+            else
+            {
+                previousScore = maxScorePlayer;
+                previousRank = i;
+                scoresPlayersEnd[indexStrongestPlayer].text += maxScorePlayer;
+                rankImagesEnd[indexStrongestPlayer].sprite = rankImages[i];
+            }
             scoresPlayers[indexStrongestPlayer] = -2;
         }
     }
