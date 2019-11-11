@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,7 +33,8 @@ public class Catch : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(joint == null && collision.collider.tag == "catchable" && rotateToDirection.catchState != RotateToDirection.CatchState.none)
+        string[] goodTag = { "catchable", "Player", "member" };
+        if (joint == null && Array.IndexOf(goodTag, collision.collider.tag) != -1 && rotateToDirection.catchState != RotateToDirection.CatchState.none)
         {
             collision.collider.transform.localRotation = Quaternion.Euler(0, 0, 0);
 
