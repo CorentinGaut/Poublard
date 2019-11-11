@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199d0ff7653e68a4c94dc12621a5858a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ejectionForce: 22
+  ejectionForce: 10
   exit: {fileID: 4370032239095714493}
   ejectionVector: {x: 0, y: 0, z: 0}
   maxAngle: 60
