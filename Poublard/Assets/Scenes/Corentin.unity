@@ -3545,6 +3545,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ad8a39e44f7d7f4b82949764ad44ca5, type: 3}
+--- !u!1 &442365377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442365378}
+  - component: {fileID: 442365379}
+  m_Layer: 10
+  m_Name: Up
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &442365378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442365377}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -20.34, y: 39.4, z: -47.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4467131697225337654}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &442365379
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442365377}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 98.40842, y: 80.34149, z: 29.430046}
+  m_Center: {x: -48.70421, y: 36.870743, z: -14.215023}
 --- !u!4 &450591069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4272243748894505432, guid: 06af5c8c7b1bec2448229e81bfc9bcf7,
@@ -6798,6 +6842,16 @@ PrefabInstance:
       propertyPath: nbTrashRequired
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 4522373570050647506, guid: b65bf33dc6bf9a743a7157507f6636e5,
+        type: 3}
+      propertyPath: winMusique
+      value: 
+      objectReference: {fileID: 8300000, guid: fc32679f9a289434f8547ca6cdc428fb, type: 3}
+    - target: {fileID: 4522373570050647506, guid: b65bf33dc6bf9a743a7157507f6636e5,
+        type: 3}
+      propertyPath: loseMusique
+      value: 
+      objectReference: {fileID: 8300000, guid: 312c74f41e64cfb49b309f2a23dacdcb, type: 3}
     - target: {fileID: 4522373570050647507, guid: b65bf33dc6bf9a743a7157507f6636e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7893,7 +7947,7 @@ PrefabInstance:
       objectReference: {fileID: 901878865}
     - target: {fileID: 258267588, guid: 8d80f4bc32fec114894db4b4839f6506, type: 3}
       propertyPath: nbTrashSpawned
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 258267588, guid: 8d80f4bc32fec114894db4b4839f6506, type: 3}
       propertyPath: minPosX
@@ -12340,6 +12394,12 @@ PrefabInstance:
 --- !u!1 &4467131697225337653 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6091546020790183717, guid: 72b33f4588d28114fa46c378d53efeae,
+    type: 3}
+  m_PrefabInstance: {fileID: 4467131697225337652}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4467131697225337654 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4467131696196653212, guid: 72b33f4588d28114fa46c378d53efeae,
     type: 3}
   m_PrefabInstance: {fileID: 4467131697225337652}
   m_PrefabAsset: {fileID: 0}
