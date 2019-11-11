@@ -6,6 +6,9 @@ public class jumpUp : MonoBehaviour
 {
     public GameObject effectPrefab;
 
+    public SoundPlayer soundPlayerPrefab;
+    public AudioClip effectSound;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -13,6 +16,12 @@ public class jumpUp : MonoBehaviour
             other.transform.parent.GetComponent<PoublardRagdoll>().ChangeJumpMultiplicator();
             Instantiate(effectPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
+
+            SoundPlayer spawnSoundPlayer = Instantiate(soundPlayerPrefab, gameObject.transform.position, Quaternion.identity);
+            spawnSoundPlayer.timeBeforeDestroy = 1f;
+            spawnSoundPlayer.loop = false;
+            spawnSoundPlayer.volume = 0.4f;
+            spawnSoundPlayer.audioClip = effectSound;
         }
     }
 }

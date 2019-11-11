@@ -2915,6 +2915,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9153966830d4c324b8efc36ef2ebf552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundPlayerPrefab: {fileID: 1504115762082790847, guid: 1374391938b9bb64685e579a6d7798f3,
+    type: 3}
+  respawnSound: {fileID: 8300000, guid: c4d5a204c752fb94aa1fdc80db2b719c, type: 3}
   angleDirection: {x: 0, y: 0, z: 0, w: 0}
   vecDirection: {x: 0, y: 0, z: 0}
   controllerNumber: 1
@@ -2923,6 +2926,7 @@ MonoBehaviour:
   speedMultiplicator: 1
   punchForce: 150
   jumpForce: 1000
+  walkForce: 140
   dead: 0
   respawn: 0
   prefab: {fileID: 5691800633283859424, guid: 42e39515f47aa3c419075771083e070c, type: 3}

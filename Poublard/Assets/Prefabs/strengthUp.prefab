@@ -107,3 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectPrefab: {fileID: 6665779643694697850, guid: 3fbcbc5988ae6ea4f86729b514b2260a,
     type: 3}
+  soundPlayerPrefab: {fileID: 1504115762082790847, guid: 1374391938b9bb64685e579a6d7798f3,
+    type: 3}
+  effectSound: {fileID: 8300000, guid: 01a7a339e9d7f714eb631ce81f320e67, type: 3}
