@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class TrashContainer : MonoBehaviour
 {
+    public SoundPlayer soundPlayerPrefab;
+    public AudioClip playerPointSound;
+
     public int nbPlayer;
     public int score;
     public LevelManager levelManager;
@@ -16,7 +19,6 @@ public class TrashContainer : MonoBehaviour
     }
 
 
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "catchable")
@@ -26,6 +28,12 @@ public class TrashContainer : MonoBehaviour
             Destroy(other.gameObject);
             txtScore.text = score.ToString();
             this.GetComponent<Animator>().SetTrigger("trashInside");
+
+            SoundPlayer spawnSoundPlayer = Instantiate(soundPlayerPrefab, gameObject.transform.position, Quaternion.identity);
+            spawnSoundPlayer.timeBeforeDestroy = 1f;
+            spawnSoundPlayer.loop ^= false;
+            spawnSoundPlayer.volume = 1f;
+            spawnSoundPlayer.audioClip = playerPointSound;
         }
     }
 }

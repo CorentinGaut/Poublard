@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed4778f648d8b24db6eb18c2c793d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundPlayerPrefab: {fileID: 1504115762082790847, guid: 1374391938b9bb64685e579a6d7798f3,
+    type: 3}
+  playerPointSound: {fileID: 8300000, guid: 6bbc4a5c1d349db44899a342b4893aec, type: 3}
   nbPlayer: 3
   score: 0
   levelManager: {fileID: 0}
@@ -28,6 +31,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed4778f648d8b24db6eb18c2c793d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundPlayerPrefab: {fileID: 1504115762082790847, guid: 1374391938b9bb64685e579a6d7798f3,
+    type: 3}
+  playerPointSound: {fileID: 8300000, guid: 6bbc4a5c1d349db44899a342b4893aec, type: 3}
   nbPlayer: 4
   score: 0
   levelManager: {fileID: 0}
@@ -44,6 +50,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed4778f648d8b24db6eb18c2c793d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundPlayerPrefab: {fileID: 1504115762082790847, guid: 1374391938b9bb64685e579a6d7798f3,
+    type: 3}
+  playerPointSound: {fileID: 8300000, guid: 6bbc4a5c1d349db44899a342b4893aec, type: 3}
   nbPlayer: 2
   score: 0
   levelManager: {fileID: 0}
@@ -18944,6 +18953,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed4778f648d8b24db6eb18c2c793d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundPlayerPrefab: {fileID: 1504115762082790847, guid: 1374391938b9bb64685e579a6d7798f3,
+    type: 3}
+  playerPointSound: {fileID: 8300000, guid: 6bbc4a5c1d349db44899a342b4893aec, type: 3}
   nbPlayer: 1
   score: 0
   levelManager: {fileID: 0}
@@ -18989,11 +19001,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7368457766909920582}
     m_Modifications:
-    - target: {fileID: -3962654534122515783, guid: d9d5af25566410847b1a8f774a8fea44,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 3329e6c6877bcd640a1196ebeda3082c, type: 2}
     - target: {fileID: 8486207564519732569, guid: d9d5af25566410847b1a8f774a8fea44,
         type: 3}
       propertyPath: m_Name
@@ -19064,6 +19071,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: -3962654534122515783, guid: d9d5af25566410847b1a8f774a8fea44,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3329e6c6877bcd640a1196ebeda3082c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9d5af25566410847b1a8f774a8fea44, type: 3}
 --- !u!1 &8035188689084804547 stripped
@@ -19091,11 +19103,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7368457766909920582}
     m_Modifications:
-    - target: {fileID: -3962654534122515783, guid: d9d5af25566410847b1a8f774a8fea44,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 3329e6c6877bcd640a1196ebeda3082c, type: 2}
     - target: {fileID: 8486207564519732569, guid: d9d5af25566410847b1a8f774a8fea44,
         type: 3}
       propertyPath: m_Name
@@ -19166,6 +19173,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: -3962654534122515783, guid: d9d5af25566410847b1a8f774a8fea44,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3329e6c6877bcd640a1196ebeda3082c, type: 2}
     - target: {fileID: 880357798157609506, guid: d9d5af25566410847b1a8f774a8fea44,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
