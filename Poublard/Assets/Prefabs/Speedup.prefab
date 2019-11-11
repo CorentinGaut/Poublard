@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6043185182276935493}
   - component: {fileID: 8368010389291105564}
   m_Layer: 0
-  m_Name: speedUp
+  m_Name: Speedup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,6 +127,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectPrefab: {fileID: 6166910945746556263, guid: be4d4ddf93a93a24a98619280ff9d240,
     type: 3}
+  soundPlayerPrefab: {fileID: 1504115762082790847, guid: 1374391938b9bb64685e579a6d7798f3,
+    type: 3}
+  effectSound: {fileID: 8300000, guid: 01a7a339e9d7f714eb631ce81f320e67, type: 3}
 --- !u!1 &3278617518533796420
 GameObject:
   m_ObjectHideFlags: 0

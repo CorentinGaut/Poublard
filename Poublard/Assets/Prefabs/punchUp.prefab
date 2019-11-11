@@ -111,6 +111,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectPrefab: {fileID: 3159241127201697587, guid: 93b9a9b10f8979b47bfdaf5c49976f57,
     type: 3}
+  soundPlayerPrefab: {fileID: 1504115762082790847, guid: 1374391938b9bb64685e579a6d7798f3,
+    type: 3}
+  effectSound: {fileID: 8300000, guid: 01a7a339e9d7f714eb631ce81f320e67, type: 3}
 --- !u!54 &6043185182276935493
 Rigidbody:
   m_ObjectHideFlags: 0

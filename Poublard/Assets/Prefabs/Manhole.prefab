@@ -257,7 +257,7 @@ MonoBehaviour:
   - {fileID: 671614274407816024, guid: 28b998657d6fe3d448fa8344ab47a630, type: 3}
   - {fileID: 3140995245977174723, guid: a8429a01e6fbd934badb6feb30775712, type: 3}
   lvlManager: {fileID: 0}
-  nbTrashSpawned: 60
+  nbTrashSpawned: 10
   spawnSound: {fileID: 0}
   soundPlayerPrefab: {fileID: 0}
   minPosX: -5
@@ -265,9 +265,9 @@ MonoBehaviour:
   maxPosX: 10
   maxPosZ: 45
   ejectionDistance: 5
-  ejectionDistanceMultiplicator: 1.5
-  maxTrashEjectionTime: 15
-  minTrashEjectionTime: 6
+  ejectionDistanceMultiplicator: 2.5
+  maxTrashEjectionTime: 30
+  minTrashEjectionTime: 20
   ejectionTimer: 0
 --- !u!114 &-7534709048389218679
 MonoBehaviour:
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199d0ff7653e68a4c94dc12621a5858a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ejectionForce: 30
+  ejectionForce: 22
   exit: {fileID: 4370032239095714493}
   ejectionVector: {x: 0, y: 0, z: 0}
   maxAngle: 60
