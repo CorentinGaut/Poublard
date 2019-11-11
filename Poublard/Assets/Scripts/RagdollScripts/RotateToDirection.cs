@@ -9,6 +9,8 @@ public class RotateToDirection : MonoBehaviour
     PoublardRagdoll poublardRagdoll;
     NearestCatchable nearestCatchable;
     DisableActiveRagdoll disableActiveRagdoll;
+    public SoundPlayer soundPlayerPrefab;
+    public AudioClip punchSound;
 
     // Start is called before the first frame update
     void Start()
@@ -79,6 +81,12 @@ public class RotateToDirection : MonoBehaviour
             transform.parent.Find("RightForearm").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, poublardRagdoll.punchMultiplicator * poublardRagdoll.punchForce));
             transform.parent.Find("Left Foot").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, -poublardRagdoll.punchMultiplicator * poublardRagdoll.punchForce));
             transform.parent.Find("Right Foot").GetComponent<Rigidbody>().AddForce(angleDirection * new Vector3(0, 0, -poublardRagdoll.punchMultiplicator * poublardRagdoll.punchForce));
+
+            SoundPlayer spawnSoundPlayer = Instantiate(soundPlayerPrefab, gameObject.transform.position, Quaternion.identity);
+            spawnSoundPlayer.timeBeforeDestroy = 1f;
+            spawnSoundPlayer.loop = false;
+            spawnSoundPlayer.volume = 0.6f;
+            spawnSoundPlayer.audioClip = punchSound;
         }
         //jump
         if (!disableActiveRagdoll.disableActiveRagdoll && Input.GetButtonDown("Character " + poublardRagdoll.controllerNumber + " Cancel"))
