@@ -65,6 +65,7 @@ public class LevelManager : MonoBehaviour
         SpawnUI();
 
         //pour jouer la musique
+        GameObject.Find("GameManager").GetComponent<AudioSource>().Stop();
         SoundPlayer musicPlayer = Instantiate(soundPlayerPrefab, transform.position, Quaternion.identity);
         musicPlayer.audioClip = levelMusic;
         musicPlayer.loop = true;
