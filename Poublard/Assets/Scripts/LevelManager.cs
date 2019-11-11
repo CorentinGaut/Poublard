@@ -20,6 +20,8 @@ public class LevelManager : MonoBehaviour
 
     [Header("Sounds")]
     public AudioClip levelMusic;
+    public AudioClip winMusique;
+    public AudioClip loseMusique;
 
     public int[] scoresPlayers;
     public GameObject[] scorePanels;
@@ -47,6 +49,9 @@ public class LevelManager : MonoBehaviour
     public Canvas endGameCanvas;
 
     private SoundPlayer musicPlayer;
+    private SoundPlayer endPlayer;
+
+    private float timeCount = 0;
     // Start is called before the first frame update
 
 
@@ -129,6 +134,14 @@ public class LevelManager : MonoBehaviour
                 DisplayWinners();
                 scoreDisplayed = true;
             }
+            else
+            {
+                timeCount += Time.deltaTime;
+                if (timeCount >= 4.5f)
+                {
+
+                }
+            }
 
         }
     }
@@ -155,9 +168,23 @@ public class LevelManager : MonoBehaviour
         {
             panelEndVictory.SetActive(true);
             panelEndDefeat.SetActive(false);
+
+            Destroy(musicPlayer);
+            endPlayer = Instantiate(soundPlayerPrefab, transform.position, Quaternion.identity);
+            endPlayer.audioClip = winMusique;
+            endPlayer.loop = true;
+            endPlayer.timeBeforeDestroy = 5f;
+            endPlayer.volume = 1f;
         }
         else
         {
+            Destroy(musicPlayer);
+            endPlayer = Instantiate(soundPlayerPrefab, transform.position, Quaternion.identity);
+            endPlayer.audioClip = loseMusique;
+            endPlayer.loop = true;
+            endPlayer.timeBeforeDestroy = 5f;
+            endPlayer.volume = 1f;
+
             panelEndVictory.SetActive(false);
             panelEndDefeat.SetActive(true);
         }
