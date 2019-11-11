@@ -9,7 +9,8 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
 
-    public AudioClip levelMusic;
+    public SoundPlayer soundPlayerPrefab;
+
 
     public int totalNbTrash;
     public int nbTrashPicked;
@@ -17,6 +18,8 @@ public class LevelManager : MonoBehaviour
     public int nbTrashRequired;
     public int nbPlayers;
 
+    [Header("Sounds")]
+    public AudioClip levelMusic;
 
     public int[] scoresPlayers;
     public GameObject[] scorePanels;
@@ -60,6 +63,12 @@ public class LevelManager : MonoBehaviour
         SpawnPlayers();
         SpawnBennes();
         SpawnUI();
+
+        //pour jouer la musique
+        SoundPlayer musicPlayer = Instantiate(soundPlayerPrefab, transform.position, Quaternion.identity);
+        musicPlayer.audioClip = levelMusic;
+        musicPlayer.loop = true;
+        musicPlayer.timeBeforeDestroy = 1000f;
     }
 
     public void SpawnPlayers()

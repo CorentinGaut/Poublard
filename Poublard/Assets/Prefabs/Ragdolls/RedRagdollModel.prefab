@@ -2839,6 +2839,7 @@ GameObject:
   - component: {fileID: 3383620955907085441}
   - component: {fileID: 3383620955907085442}
   - component: {fileID: 3383620955907085444}
+  - component: {fileID: 3813527119318986854}
   m_Layer: 0
   m_Name: RedRagdollModel
   m_TagString: Untagged
@@ -2855,7 +2856,7 @@ Transform:
   m_GameObject: {fileID: 5691800633283859424}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.71, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5691800631617865392}
   - {fileID: 5691800631843469576}
@@ -2925,6 +2926,20 @@ MonoBehaviour:
   dead: 0
   respawn: 0
   prefab: {fileID: 5691800633283859424, guid: 80b2a28de8f0056428d8878cc47bb307, type: 3}
+--- !u!114 &3813527119318986854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5691800633283859424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08b9edad32bc98b489080add5969644d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  isDead: 1
 --- !u!1 &8547665607173912302
 GameObject:
   m_ObjectHideFlags: 0

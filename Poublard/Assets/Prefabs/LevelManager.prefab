@@ -43,20 +43,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f6865de5b05d34a815451938a6181a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelMusic: {fileID: 0}
   totalNbTrash: 0
   nbTrashPicked: 0
-  nbTrashRequired: 0
-  completionPercentageRequired: 70
+  nbTrashRequired: 15
   nbPlayers: 4
   scoresPlayers: 
+  scorePanels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  scoresPlayersEnd:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rankImages:
+  - {fileID: 21300000, guid: eb4ea210cf04cca4d9142ecb3b309627, type: 3}
+  - {fileID: 21300000, guid: a2a8839e078c5474c918b3429aa48e19, type: 3}
+  - {fileID: 21300000, guid: 7ed90b41a934abd4f8e250b516565578, type: 3}
+  - {fileID: 21300000, guid: 6f237ab7043493b4fa32198703ac1cb6, type: 3}
+  rankImagesEnd:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rankPlayers: 
   SpawnPoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  Characters: []
-  time: 300
+  bennes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Characters:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  uiTrash:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  time: 180
+  scoreDisplayed: 0
   txtGlobalScore: {fileID: 0}
+  txtGlobalScoreEnd: {fileID: 0}
+  panelEndVictory: {fileID: 0}
+  panelEndDefeat: {fileID: 0}
   txtTimer: {fileID: 0}
   imageGlobalScore: {fileID: 0}
   endGameCanvas: {fileID: 0}
