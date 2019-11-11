@@ -2842,7 +2842,7 @@ GameObject:
   - component: {fileID: -6765753643902600445}
   m_Layer: 0
   m_Name: BlueRagdollModel
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2925,7 +2925,7 @@ MonoBehaviour:
   jumpForce: 1000
   dead: 0
   respawn: 0
-  prefab: {fileID: 5691800633283859424, guid: 1937eb5125d311d41ae860a5887dc661, type: 3}
+  prefab: {fileID: 5691800633283859424, guid: 35b54d573e2d14e41afd8425e44858f1, type: 3}
 --- !u!114 &-6765753643902600445
 MonoBehaviour:
   m_ObjectHideFlags: 0

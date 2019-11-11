@@ -2842,7 +2842,7 @@ GameObject:
   - component: {fileID: -1252537938357564991}
   m_Layer: 0
   m_Name: GreenRagdollModel
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2925,7 +2925,7 @@ MonoBehaviour:
   jumpForce: 1000
   dead: 0
   respawn: 0
-  prefab: {fileID: 5691800633283859424, guid: 09a0b0dc72f390b45910d5ee3ca9a6cc, type: 3}
+  prefab: {fileID: 5691800633283859424, guid: abe4542b77968db4bb347d53f90dc928, type: 3}
 --- !u!114 &-1252537938357564991
 MonoBehaviour:
   m_ObjectHideFlags: 0
