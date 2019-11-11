@@ -11,7 +11,7 @@ public class SpeedUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" || other.tag == "member")
         {
             other.transform.parent.GetComponent<PoublardRagdoll>().ChangeSpeedMultiplicator();
             Instantiate(effectPrefab, transform.position, Quaternion.identity);
