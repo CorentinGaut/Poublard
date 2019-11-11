@@ -18,7 +18,7 @@ public class jumpUp : MonoBehaviour
             Destroy(gameObject);
 
             SoundPlayer spawnSoundPlayer = Instantiate(soundPlayerPrefab, gameObject.transform.position, Quaternion.identity);
-            spawnSoundPlayer.timeBeforeDestroy = 1f;
+            spawnSoundPlayer.timeBeforeDestroy = 2f;
             spawnSoundPlayer.loop = false;
             spawnSoundPlayer.volume = 0.4f;
             spawnSoundPlayer.audioClip = effectSound;
