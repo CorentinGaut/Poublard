@@ -91,15 +91,15 @@ public class PoublardRagdoll : MonoBehaviour
         }
         if (dead && respawn)
         {
-            respawn = false;
-            dead = false;
-            respawnCoroutine = StartCoroutine(Respawn());
-
             SoundPlayer spawnSoundPlayer = Instantiate(soundPlayerPrefab, gameObject.transform.position, Quaternion.identity);
-            spawnSoundPlayer.timeBeforeDestroy = 1f;
+            spawnSoundPlayer.timeBeforeDestroy = 5f;
             spawnSoundPlayer.loop = false;
             spawnSoundPlayer.volume = 1f;
             spawnSoundPlayer.audioClip = respawnSound;
+
+            respawn = false;
+            dead = false;
+            respawnCoroutine = StartCoroutine(Respawn());
 
         } else
         {
