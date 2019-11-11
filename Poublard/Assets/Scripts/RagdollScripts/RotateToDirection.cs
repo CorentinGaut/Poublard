@@ -50,11 +50,11 @@ public class RotateToDirection : MonoBehaviour
             Rigidbody leftArmRB = transform.parent.Find("LeftForearm").GetComponent<Rigidbody>();
             if (nearestCatchable.nearestCatchableObject == null)
             {
-                leftArmRB.AddForce(angleDirection * new Vector3(0, 0, 7f));
+                leftArmRB.AddForce(angleDirection * new Vector3(0, 0, 4f));
             } else
             {
                 Vector3 vecDir = Vector3.Normalize(nearestCatchable.nearestCatchableObject.transform.position - leftArmRB.transform.position);
-                leftArmRB.AddForce(35f * vecDir);
+                leftArmRB.AddForce(25f * vecDir);
             }
         } else if (catchState == CatchState.rightHand)
         {
@@ -62,12 +62,12 @@ public class RotateToDirection : MonoBehaviour
             Rigidbody rightArmRB = transform.parent.Find("RightForearm").GetComponent<Rigidbody>();
             if (nearestCatchable.nearestCatchableObject == null)
             {
-                rightArmRB.AddForce(angleDirection * new Vector3(0, 0, 7f));
+                rightArmRB.AddForce(angleDirection * new Vector3(0, 0, 4f));
             }
             else
             {
                 Vector3 vecDir = Vector3.Normalize(nearestCatchable.nearestCatchableObject.transform.position - rightArmRB.transform.position);
-                rightArmRB.AddForce(35f * vecDir);
+                rightArmRB.AddForce(25f * vecDir);
             }
         }
 
@@ -108,7 +108,7 @@ public class RotateToDirection : MonoBehaviour
             if (catchState == CatchState.none)
             {
                 catchState = CatchState.leftHand;
-                Invoke("StopCatching", 5f);
+                Invoke("StopCatching", 2f);
             }
         }
         //catch right
@@ -117,7 +117,7 @@ public class RotateToDirection : MonoBehaviour
             if (catchState == CatchState.none)
             {
                 catchState = CatchState.rightHand;
-                Invoke("StopCatching", 5f);
+                Invoke("StopCatching", 2f);
             }
         }
 
