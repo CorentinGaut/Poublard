@@ -45,6 +45,8 @@ public class LevelManager : MonoBehaviour
     public Image imageGlobalScore;
 
     public Canvas endGameCanvas;
+
+    private SoundPlayer musicPlayer;
     // Start is called before the first frame update
 
 
@@ -66,7 +68,7 @@ public class LevelManager : MonoBehaviour
 
         //pour jouer la musique
         GameObject.Find("GameManager").GetComponent<AudioSource>().Stop();
-        SoundPlayer musicPlayer = Instantiate(soundPlayerPrefab, transform.position, Quaternion.identity);
+        musicPlayer = Instantiate(soundPlayerPrefab, transform.position, Quaternion.identity);
         musicPlayer.audioClip = levelMusic;
         musicPlayer.loop = true;
         musicPlayer.timeBeforeDestroy = 1000f;
@@ -112,6 +114,10 @@ public class LevelManager : MonoBehaviour
         time -= Time.deltaTime;
         txtTimer.text = ((int)time).ToString();
 
+        if (time <= 30f)
+        {
+            musicPlayer.GetComponent<AudioSource>().pitch = 1.3f;
+        }
         if (time <= 0) //fin de partie
         {
             Time.timeScale = 0f;
