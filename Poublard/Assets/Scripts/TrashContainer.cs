@@ -32,7 +32,7 @@ public class TrashContainer : MonoBehaviour
             SoundPlayer spawnSoundPlayer = Instantiate(soundPlayerPrefab, gameObject.transform.position, Quaternion.identity);
             spawnSoundPlayer.timeBeforeDestroy = 1f;
             spawnSoundPlayer.loop ^= false;
-            spawnSoundPlayer.volume = 1f;
+            spawnSoundPlayer.volume = 0.4f;
             spawnSoundPlayer.audioClip = playerPointSound;
         }
     }
