@@ -485,6 +485,11 @@ PrefabInstance:
       propertyPath: walkForce
       value: 600
       objectReference: {fileID: 0}
+    - target: {fileID: 3383620955907085444, guid: 42e39515f47aa3c419075771083e070c,
+        type: 3}
+      propertyPath: jumpForce
+      value: 1300
+      objectReference: {fileID: 0}
     - target: {fileID: 5691800631272326791, guid: 42e39515f47aa3c419075771083e070c,
         type: 3}
       propertyPath: m_ConnectedAnchor.z

@@ -9,6 +9,8 @@ public class RotateToDirection : MonoBehaviour
     PoublardRagdoll poublardRagdoll;
     NearestCatchable nearestCatchable;
     DisableActiveRagdoll disableActiveRagdoll;
+    float defaultYForce;
+    AddPermanentForces pelvisPermanentForces, leftKneeForces, rightKneeForces;
     public SoundPlayer soundPlayerPrefab;
     public AudioClip punchSound;
 
@@ -19,6 +21,12 @@ public class RotateToDirection : MonoBehaviour
         poublardRagdoll = GetComponentInParent<PoublardRagdoll>();
         nearestCatchable = GetComponentInChildren<NearestCatchable>();
         disableActiveRagdoll = GetComponentInParent<DisableActiveRagdoll>();
+        pelvisPermanentForces = GetComponent<AddPermanentForces>();
+        defaultYForce = pelvisPermanentForces.yForce;
+        leftKneeForces = transform.parent.Find("Left Knee").gameObject.AddComponent<AddPermanentForces>();
+        leftKneeForces.zTorque = 300f;
+        rightKneeForces = transform.parent.Find("Right Knee").gameObject.AddComponent<AddPermanentForces>();
+        rightKneeForces.zTorque = 300f;
     }
 
     public enum CatchState
@@ -111,6 +119,37 @@ public class RotateToDirection : MonoBehaviour
                 catchState = CatchState.rightHand;
                 Invoke("StopCatching", 2f);
             }
+        }
+
+        //right gachette : s'accroupir
+        if(Input.GetAxis("Character " + poublardRagdoll.controllerNumber + " Grab") > 0.1f)
+        {
+            pelvisPermanentForces.yForce = defaultYForce * 0.25f;
+            pelvisPermanentForces.zTorque = -600f;
+            pelvisPermanentForces.AddZTorque();
+            Vector3 force = 50f * (poublardRagdoll.angleDirection * new Vector3(0, -1, 0));
+            leftKneeForces.AddZTorque();
+            leftKneeForces.GetComponent<Rigidbody>().AddForce(force);
+            force = 50f * (poublardRagdoll.angleDirection * new Vector3(0, -1, 0));
+            rightKneeForces.AddZTorque();
+            rightKneeForces.GetComponent<Rigidbody>().AddForce(force);
+        } else
+        {
+            pelvisPermanentForces.yForce = defaultYForce;
+        }
+
+        //right gachette : s'incliner
+        if (Input.GetAxis("Character " + poublardRagdoll.controllerNumber + " Grab") > 0.1f)
+        {
+            pelvisPermanentForces.yForce = defaultYForce * 0.25f;
+            pelvisPermanentForces.zTorque = -600f;
+            pelvisPermanentForces.AddZTorque();
+            leftKneeForces.AddZTorque();
+            rightKneeForces.AddZTorque();
+        }
+        else
+        {
+            pelvisPermanentForces.yForce = defaultYForce;
         }
 
         if (Mathf.Abs(angle1 - angle2) < 10f)
