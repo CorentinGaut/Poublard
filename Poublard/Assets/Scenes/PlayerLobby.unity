@@ -439,10 +439,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -31241,6 +31241,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrashContainers
       objectReference: {fileID: 0}
+    - target: {fileID: 1756944002308049411, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756944002308049411, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
+        type: 3}
+      propertyPath: m_Name
+      value: TrashContainer Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756944001752908693, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756944001752908693, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
+        type: 3}
+      propertyPath: m_Name
+      value: TrashContainer Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756944001954972601, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1756944001954972601, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
+        type: 3}
+      propertyPath: m_Name
+      value: TrashContainer Yellow
+      objectReference: {fileID: 0}
     - target: {fileID: 7368457766909920582, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31311,35 +31341,45 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.3135015
       objectReference: {fileID: 0}
-    - target: {fileID: 1756944001954972601, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
+    - target: {fileID: 8035188689084804551, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: levelManager
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1756944001954972601, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
+    - target: {fileID: 8035188689084804551, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
         type: 3}
-      propertyPath: m_Name
-      value: TrashContainer Yellow
+      propertyPath: txtScore
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1756944002308049411, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
+    - target: {fileID: 7900716259039448376, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: levelManager
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1756944002308049411, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
+    - target: {fileID: 7900716259039448376, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
         type: 3}
-      propertyPath: m_Name
-      value: TrashContainer Blue
+      propertyPath: txtScore
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1756944001752908693, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
+    - target: {fileID: 7900716258566260616, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: levelManager
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1756944001752908693, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
+    - target: {fileID: 7900716258566260616, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
         type: 3}
-      propertyPath: m_Name
-      value: TrashContainer Red
+      propertyPath: txtScore
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7900716258355042927, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
+        type: 3}
+      propertyPath: txtScore
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7900716258355042927, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
+        type: 3}
+      propertyPath: levelManager
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8035188689084804547, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
         type: 3}
@@ -31350,46 +31390,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TrashContainer Green
-      objectReference: {fileID: 0}
-    - target: {fileID: 7900716258566260616, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
-        type: 3}
-      propertyPath: levelManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7900716258566260616, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
-        type: 3}
-      propertyPath: txtScore
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7900716258355042927, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
-        type: 3}
-      propertyPath: txtScore
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7900716258355042927, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
-        type: 3}
-      propertyPath: levelManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7900716259039448376, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
-        type: 3}
-      propertyPath: levelManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7900716259039448376, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
-        type: 3}
-      propertyPath: txtScore
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8035188689084804551, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
-        type: 3}
-      propertyPath: levelManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8035188689084804551, guid: 1158f74ce3dd598469f0c8ae1ff5af56,
-        type: 3}
-      propertyPath: txtScore
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1158f74ce3dd598469f0c8ae1ff5af56, type: 3}
