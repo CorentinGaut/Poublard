@@ -10,6 +10,10 @@ public class TrashSpawner : MonoBehaviour
 
     public int nbTrashSpawned;
 
+    public AudioClip spawnSound;
+
+    public SoundPlayer soundPlayerPrefab;
+
     public float minPosX;
     public float minPosZ;
     public float maxPosX;
@@ -22,12 +26,16 @@ public class TrashSpawner : MonoBehaviour
     public float minTrashEjectionTime;
     public float ejectionTimer;
 
+    private GameObject gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
         lvlManager.totalNbTrash += nbTrashSpawned;
         SpawnInitialTrash();
         ejectionTimer = maxTrashEjectionTime;
+
+        gameManager = GameObject.Find("GameManager");
     }
 
     
@@ -50,6 +58,12 @@ public class TrashSpawner : MonoBehaviour
             float angle = UnityEngine.Random.Range(-Mathf.PI, Mathf.PI);
             go.GetComponent<Rigidbody>().AddForce(new Vector3(Mathf.Cos(angle)*ejectionDistance, ejectionDistance,  Mathf.Sin(angle)*ejectionDistance),ForceMode.Impulse);
         }
+
+        SoundPlayer spawnSoundPlayer = Instantiate(soundPlayerPrefab, gameObject.transform.position, Quaternion.identity);
+        spawnSoundPlayer.timeBeforeDestroy = 1f;
+        spawnSoundPlayer.loop ^= false;
+        spawnSoundPlayer.volume = 1f;
+        spawnSoundPlayer.audioClip = spawnSound;
     }
 
     private void SpawnTrash()
@@ -61,5 +75,11 @@ public class TrashSpawner : MonoBehaviour
         go.GetComponent<Rigidbody>().AddForce(new Vector3(Mathf.Cos(angle) * ejectionDistance * ejectionDistanceMultiplicator, ejectionDistance*ejectionDistanceMultiplicator, Mathf.Sin(angle) * ejectionDistance*ejectionDistanceMultiplicator), ForceMode.Impulse);
         nbTrashSpawned++;
         lvlManager.totalNbTrash++;
+
+        SoundPlayer spawnSoundPlayer = Instantiate(soundPlayerPrefab, gameObject.transform.position, Quaternion.identity);
+        spawnSoundPlayer.timeBeforeDestroy = 1f;
+        spawnSoundPlayer.loop ^= false;
+        spawnSoundPlayer.volume = 1f;
+        spawnSoundPlayer.audioClip = spawnSound;
     }
 }
