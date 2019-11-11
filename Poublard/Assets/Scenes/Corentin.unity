@@ -9900,10 +9900,72 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 222162133}
+    - target: {fileID: 97682500230412100, guid: 72b33f4588d28114fa46c378d53efeae,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467131697530125373, guid: 72b33f4588d28114fa46c378d53efeae,
+        type: 3}
+      propertyPath: objects.Array.size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4467131697530125373, guid: 72b33f4588d28114fa46c378d53efeae,
         type: 3}
       propertyPath: lvlManager
       value: 
       objectReference: {fileID: 901878865}
+    - target: {fileID: 4467131697530125373, guid: 72b33f4588d28114fa46c378d53efeae,
+        type: 3}
+      propertyPath: spawnSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b0e2c67ebe26fb344b78a996085d5e1c, type: 3}
+    - target: {fileID: 4467131697530125373, guid: 72b33f4588d28114fa46c378d53efeae,
+        type: 3}
+      propertyPath: nbTrashSpawned
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467131697530125373, guid: 72b33f4588d28114fa46c378d53efeae,
+        type: 3}
+      propertyPath: minPosX
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467131697530125373, guid: 72b33f4588d28114fa46c378d53efeae,
+        type: 3}
+      propertyPath: minPosZ
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467131697530125373, guid: 72b33f4588d28114fa46c378d53efeae,
+        type: 3}
+      propertyPath: maxPosX
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467131697530125373, guid: 72b33f4588d28114fa46c378d53efeae,
+        type: 3}
+      propertyPath: maxPosZ
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467131697530125373, guid: 72b33f4588d28114fa46c378d53efeae,
+        type: 3}
+      propertyPath: maxTrashEjectionTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467131697530125373, guid: 72b33f4588d28114fa46c378d53efeae,
+        type: 3}
+      propertyPath: minTrashEjectionTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4467131697530125373, guid: 72b33f4588d28114fa46c378d53efeae,
+        type: 3}
+      propertyPath: objects.Array.data[7]
+      value: 
+      objectReference: {fileID: 7523567253341696930, guid: 6ab093e8559b0f244871fb5e83e2b5b4,
+        type: 3}
+    - target: {fileID: 4467131697530125373, guid: 72b33f4588d28114fa46c378d53efeae,
+        type: 3}
+      propertyPath: soundPlayerPrefab
+      value: 
+      objectReference: {fileID: 1504115762082790847, guid: 1374391938b9bb64685e579a6d7798f3,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72b33f4588d28114fa46c378d53efeae, type: 3}

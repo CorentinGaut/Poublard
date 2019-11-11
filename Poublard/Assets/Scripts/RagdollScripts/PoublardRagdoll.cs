@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class PoublardRagdoll : MonoBehaviour
 {
+    public SoundPlayer soundPlayerPrefab;
+    public AudioClip respawnSound;
+
     public Quaternion angleDirection;
     public Vector3 vecDirection;
     public int controllerNumber;
@@ -91,7 +94,13 @@ public class PoublardRagdoll : MonoBehaviour
             respawn = false;
             dead = false;
             respawnCoroutine = StartCoroutine(Respawn());
-            
+
+            SoundPlayer spawnSoundPlayer = Instantiate(soundPlayerPrefab, gameObject.transform.position, Quaternion.identity);
+            spawnSoundPlayer.timeBeforeDestroy = 1f;
+            spawnSoundPlayer.loop = false;
+            spawnSoundPlayer.volume = 1f;
+            spawnSoundPlayer.audioClip = respawnSound;
+
         } else
         {
             transform.Find("Left Foot").GetComponent<AddPermanentForces>().zForce = walkForce;
