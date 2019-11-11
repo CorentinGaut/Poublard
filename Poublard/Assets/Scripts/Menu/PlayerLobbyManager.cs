@@ -20,6 +20,7 @@ public class PlayerLobbyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1.0f;
         for (int i = 0; i < playerInputId.Length; i++)
         {
             playerInputId[i] = -1;
@@ -29,6 +30,10 @@ public class PlayerLobbyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(inputId[0]);
+        Debug.Log(inputId[1]);
+        Debug.Log(inputId[2]);
+        Debug.Log(inputId[3]);
         if (Input.GetButtonDown("Character 1 Submit") && inputId[0] == false)
         {
             Debug.Log("Manette 1");
