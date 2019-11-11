@@ -27,42 +27,53 @@ public class Hole : MonoBehaviour
     IEnumerator Ejection(GameObject cc)
     {
         //cc.SetActive(false);
+        Vector3 toExit = exit.transform.position - cc.transform.position;
         Collider[] cols = cc.transform.parent.GetComponentsInChildren<Collider>();
         Renderer[] rends = cc.transform.parent.GetComponentInParent<Transform>().GetComponentsInChildren<Renderer>();
         foreach (Collider c in cols)
         {
 
             c.enabled = false;
+            if(c.GetComponent<Rigidbody>()!=null)
+            c.gameObject.GetComponent<Rigidbody>().velocity = (gameObject.transform.position - cc.transform.position)*2;
         }
 
-        foreach (Renderer r in rends)
-        {
-            r.enabled = false;
-        }
+        //foreach (Renderer r in rends)
+        //{
+        //    r.enabled = false;
+        //}
 
-        cc.gameObject.GetComponent<Rigidbody>().velocity = (gameObject.transform.position - cc.transform.position)*2;
+        
 
 
         yield return new WaitForSeconds(1.0f);
 
-        cc.gameObject.transform.position = exit.transform.position - Vector3.down*3;
-        cc.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        foreach (Collider c in cols)
+        {
+            c.gameObject.transform.position = exit.transform.position+Vector3.up*3;
+            if (c.GetComponent<Rigidbody>() != null)
 
+                c.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        }
         float angle = UnityEngine.Random.Range(-maxAngle*Mathf.Deg2Rad, maxAngle * Mathf.Deg2Rad);
 
-        cc.GetComponent<Rigidbody>().velocity = (ejectionVector + new Vector3(Mathf.Cos(angle) * ejectionForce, ejectionForce, Mathf.Sin(angle) *ejectionForce));
-        foreach (Renderer r in rends)
+        foreach(Collider c in cols)
         {
-            r.enabled = true;
-        }       
-        yield return new WaitForSeconds(2.5f);
+            if (c.GetComponent<Rigidbody>() != null)
+                c.GetComponent<Rigidbody>().velocity = (ejectionVector + new Vector3(Mathf.Cos(angle) * ejectionForce, ejectionForce, Mathf.Sin(angle) *ejectionForce));
+        }
+
+        //foreach (Renderer r in rends)
+        //{
+        //    r.enabled = true;
+        //}       
+        yield return new WaitForSeconds(0.3f);
 
 
 
         foreach (Collider c in cols)
         {
             c.enabled = true;
-
         }
         //cc.SetActive(true);
     }
